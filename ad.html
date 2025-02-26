@@ -26,20 +26,25 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+      <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-        /* 替换或添加到这里 */
-        .col-lg-3 {
-            overflow: hidden; /* 确保放大的图片不会溢出容器 */
-        }
-
-        .flex-shrink-0.img-fluid.rounded {
+        .zoom-image {
+            width: 100%; /* 图片占满容器宽度 */
+            height: auto; /* 高度自适应 */
             transition: transform 0.4s ease; /* 设置变换的过渡效果 */
         }
-
-        .col-lg-3:hover .flex-shrink-0.img-fluid.rounded {
-            transform: scale(1.2); /* 鼠标悬停时将图片放大20% */
+    
+        /* 鼠标悬停在图片容器上时应用的放大效果 */
+        .col-lg-3:hover .zoom-image,
+        .col-sm-3:hover .zoom-image {
+            transform: scale(3); /* 鼠标悬停时将图片放大20% */
+        }
+    
+        .divider {
+            border: none;
+            border-top: 1px solid #141313; /* 灰色分割线 */
+            margin: 10px 0; /* 设置上下间距 */
         }
     </style>
 </head>
