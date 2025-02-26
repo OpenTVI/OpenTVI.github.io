@@ -170,7 +170,7 @@
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-start">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img src="./paper_img/detr.png" alt="Zoom Image" class="zoom-image">
+                                            <img src="./paper_img/epap_net.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
@@ -195,21 +195,21 @@
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-start">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img src="./paper_img/aerial_detection.png" alt="Zoom Image" class="zoom-image">
+                                            <img src="./paper_img/mfvd_icme24.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Recent Advances for Aerial Object Detection: A Survey</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://dl.acm.org/doi/abs/10.1145/3664598" target="_blank">
+                                                <span>Modality-Free Violence Detection via Cross-Modal Causal Attention and Feature Distillation</span>
+                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/document/10688031" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Jiaxu Leng,  Yongming Ye, Mengjingcheng Mo, Chengqiang Gao, Ji Gan, Bin Xiao and Xinbo Gao*
+                                            Jiaxu Leng, Zhanjie Wu, Mengjingcheng Mo, Mingpi Tan, Shuang Li, Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                Aerial object detection, as object detection in aerial images captured from an overhead perspective, has been widely applied in urban management, industrial inspection, and other aspects. However, the performance of existing aerial object detection algorithms is hindered by variations in object scales and orientations attributed to the aerial perspective. This survey presents a comprehensive review of recent advances in aerial object detection. We start with some basic concepts of aerial object detection and then summarize the five imbalance problems of aerial object detection, including scale imbalance, spatial imbalance, objective imbalance, semantic imbalance, and class imbalance. Moreover, we classify and analyze relevant methods and especially introduce the applications of aerial object detection in practical scenarios. Finally, the performance evaluation is presented on two popular aerial object detection datasets VisDrone-DET and DOTA, and we discuss several future directions that could facilitate the development of aerial object detection.
+                                                In this paper, we propose a novel framework, Modality-Free Violence Detection (MFVD), which captures the causal relationships among multimodal cues and ensures stable performance even in the absence of audio information. Specifically, we design a novel Cross-Modal Causal Attention mechanism (CCA) to deal with modality asynchrony by utilizing relative temporal distance and semantic correlation to obtain causal attention between audio and visual information instead of merely calculating correlation scores between audio and visual features. Moreover, to ensure our framework can work well when the audio modality is missing, we design a Cross-Modal Feature Distillation module (CFD), leveraging the common parts of the fused features obtained from CCA to guide the enhancement of visual features. Experimental results on the XD-Violence dataset demonstrate the superior performance of the proposed method in both vision-only and audio-visual modalities, surpassing state-of-the-art methods for both tasks.
                                             </p>
-                                            <span class="fst-italic">ACM Computing Surveys, 2024</span>
+                                            <span class="fst-italic">IEEE International Conference on Multimedia and Expo (ICME), 2024</span>
                                         </div>
                                     </div>
                                 </div>
@@ -223,17 +223,17 @@
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Selecting Learnable Training Samples is All DETRs Need in Crowded Pedestrian Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
+                                                <span>Dual Space Embedding Learning For Weakly Supervised Audio-Visual Violence Detection</span>
+                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/document/10687755" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Feng Gao,  Jiaxu Leng*, Ji Gan, and Xinbo Gao*
+                                            Yiran Liu, Zhanjie Wu, Mengjingcheng Mo, Ji Gan, Jiaxu Leng*, Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                DEtection TRansformer (DETR) and its variants (DETRs) achieved impressive performance in general object detection. However, in crowded pedestrian detection, the performance of DETRs is still unsatisfactory due to the inappropriate sample selection method which results in more false positives. To settle the issue, we proposed a simple but effective sample selection method for DETRs, Sample Selection for Crowded Pedestrians (SSCP), which consists of the constraint-guided label assignment scheme (CGLA) and the utilizability-aware focal loss (UAFL). Our core idea is to select learnable samples for DETRs and adaptively regulate the loss weights of samples based on their utilizability. Specifically, in CGLA, we proposed a new cost function to ensure that only learnable positive training samples are retained and the rest are negative training samples. Further, considering the utilizability of samples, we designed UAFL to adaptively assign different loss weights to learnable positive samples depending on their gradient ratio and IoU. 
+                                                In this paper, we propose Dual Space Embedding Learning (DSEL) for weakly supervised audio-visual violence detection, which excavates violence information deeply in both Euclidean and Hyperbolic spaces to distinguish violence from non-violence semantically and alleviate the asynchronous issue of violent cues in audio-visual patterns. Specifically, we first design a dual space visual feature interaction module (DSVFI) to deeply investigate the violence information in visual modality, which contains richer information compared to audio counterpart. Then, considering the modality asynchrony between the two modalities, we employ a late modality fusion method and design an asynchrony-aware audio-visual fusion module (AAF), in which visual features receive the violent prompt from the audio features after interacting among snippets and learning the violence information from each other. Experimental results show that our method achieves state-of-the-art performance on XD-Violence. 
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2023</span>
+                                            <span class="fst-italic">IEEE International Conference on Multimedia and Expo (ICME), 2023</span>
                                         </div>
                                     </div>
                                 </div>
