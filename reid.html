@@ -219,12 +219,12 @@
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-start">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img src="./paper_img/detr.png" alt="Zoom Image" class="zoom-image">
+                                            <img src="./paper_img/icnet.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
                                                 <span>ICNet: Joint Alignment and Reconstruction via Iterative Collaboration for Video Super-Resolution</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
+                                                <a class="btn btn-square btn-primary mx-1" href="https://dl.acm.org/doi/abs/10.1145/3503161.3547994" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
@@ -243,21 +243,21 @@
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-start">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img src="./paper_img/detr.png" alt="Zoom Image" class="zoom-image">
+                                            <img src="./paper_img/DGVDL.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Selecting Learnable Training Samples is All DETRs Need in Crowded Pedestrian Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
+                                                <span>Difficulty-Guided Variant Degradation Learning for Blind Image Super-Resolution</span>
+                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/document/10709871" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Feng Gao,  Jiaxu Leng*, Ji Gan, and Xinbo Gao*
+                                            Jiaxu Leng,  Jia Wang, Mengjingcheng Mo,Ji Gan, Wen Lu and Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                DEtection TRansformer (DETR) and its variants (DETRs) achieved impressive performance in general object detection. However, in crowded pedestrian detection, the performance of DETRs is still unsatisfactory due to the inappropriate sample selection method which results in more false positives. To settle the issue, we proposed a simple but effective sample selection method for DETRs, Sample Selection for Crowded Pedestrians (SSCP), which consists of the constraint-guided label assignment scheme (CGLA) and the utilizability-aware focal loss (UAFL). Our core idea is to select learnable samples for DETRs and adaptively regulate the loss weights of samples based on their utilizability. Specifically, in CGLA, we proposed a new cost function to ensure that only learnable positive training samples are retained and the rest are negative training samples. Further, considering the utilizability of samples, we designed UAFL to adaptively assign different loss weights to learnable positive samples depending on their gradient ratio and IoU. 
+                                                Recent blind super-resolution (BSR) methods are explored to handle unknown degradations and achieve impressive performance. However, the prevailing assumption in most BSR methods is the spatial invariance of degradation kernels across the entire image, which leads to significant performance declines when faced with spatially variant degradations caused by object motion or defocusing. Additionally, these methods do not account for the human visual system’s tendency to focus differently on areas of varying perceptual difficulty, as they uniformly process each pixel during reconstruction. To cope with these issues, we propose a difficulty-guided variant degradation learning network for BSR, named difficulty-guided degradation learning (DDL)-BSR, which explores the relationship between reconstruction difficulty and degradation estimation. Accordingly, the proposed DDL-BSR consists of three customized networks: reconstruction difficulty prediction (RDP), space-variant degradation estimation (SDE), and degradation and difficulty-informed reconstruction (DDR). Specifically, RDP learns the reconstruction difficulty with the proposed reconstruction-distance supervision. Then, SDE is designed to estimate space-variant degradation kernels according to the difficulty map. Finally, both degradation kernels and reconstruction difficulty are fed into DDR, which takes into account such two prior knowledge information to guide super-resolution (SR).
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2023</span>
+                                            <span class="fst-italic">IEEE Transactions on Neural Networks and Learning Systems, 2024</span>
                                         </div>
                                     </div>
                                 </div>
