@@ -36,17 +36,13 @@
             transition: transform 0.4s ease; /* 设置变换的过渡效果 */
         }
         
-        /* 添加这一行，确保放大的图片不会溢出容器 */
-        .col-lg-3, .col-sm-3 {
-            overflow: hidden;
-        }
         
         /* 鼠标悬停在图片容器上时应用的放大效果 */
         .col-lg-3:hover .zoom-image,
         .col-sm-3:hover .zoom-image,
         .col-lg-3:hover .flex-shrink-0.img-fluid.rounded,
         .col-sm-3:hover .flex-shrink-0.img-fluid.rounded {
-            transform: scale(1.2); /* 鼠标悬停时将图片放大20% */
+            transform: scale(3); /* 鼠标悬停时将图片放大20% */
         }
         
         .divider {
