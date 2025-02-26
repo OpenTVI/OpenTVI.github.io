@@ -223,17 +223,17 @@
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Selecting Learnable Training Samples is All DETRs Need in Crowded Pedestrian Detection</span>
+                                                <span>ICNet: Joint Alignment and Reconstruction via Iterative Collaboration for Video Super-Resolution</span>
                                                 <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Feng Gao,  Jiaxu Leng*, Ji Gan, and Xinbo Gao*
+                                            Jiaxu Leng,  Jia Wang, Xinbo Gao*, Bo Hu, Chengqiang Gao
                                             <hr class="divider">
                                             <p>
-                                                DEtection TRansformer (DETR) and its variants (DETRs) achieved impressive performance in general object detection. However, in crowded pedestrian detection, the performance of DETRs is still unsatisfactory due to the inappropriate sample selection method which results in more false positives. To settle the issue, we proposed a simple but effective sample selection method for DETRs, Sample Selection for Crowded Pedestrians (SSCP), which consists of the constraint-guided label assignment scheme (CGLA) and the utilizability-aware focal loss (UAFL). Our core idea is to select learnable samples for DETRs and adaptively regulate the loss weights of samples based on their utilizability. Specifically, in CGLA, we proposed a new cost function to ensure that only learnable positive training samples are retained and the rest are negative training samples. Further, considering the utilizability of samples, we designed UAFL to adaptively assign different loss weights to learnable positive samples depending on their gradient ratio and IoU. 
+                                                Most previous frameworks either cost too much time or adopt some fixed modules resulting in alignment error in video super-resolution (VSR). In this paper, we propose a novel many-to-many VSR framework with Iterative Collaboration (ICNet), which employs the concurrent operation by iterative collaboration between alignment and reconstruction proving to be more efficient and effective than existing recurrent and sliding-window frameworks. With the proposed iterative collaboration, alignment can be conducted on super-resolved features from reconstruction while accurate alignment boosts reconstruction in return. In each iteration, the features of low-resolution video frames are first fed into the alignment and reconstruction subnetworks, which can generate temporal aligned features and spatial super-resolved features. Then, both outputs are fed into the proposed Tidy Two-stream Fusion (TTF) subnetwork that shares inter-frame temporal information and intra-frame spatial information without redundancy. Moreover, we design the Frequency Separation Reconstruction (FSR) subnetwork to not only model high-frequency and low-frequency information separately but also take benefit of each other for better reconstruction.  
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2023</span>
+                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2022</span>
                                         </div>
                                     </div>
                                 </div>
