@@ -271,22 +271,22 @@
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Selecting Learnable Training Samples is All DETRs Need in Crowded Pedestrian Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
+                                                <span>Pareto Refocusing for Drone-View Object Detection</span>
+                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/9905640" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Feng Gao,  Jiaxu Leng*, Ji Gan, and Xinbo Gao*
+                                            Jiaxu Leng; Mengjingcheng Mo; Yinghua Zhou; Chenqiang Gao; Weisheng Li; Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                DEtection TRansformer (DETR) and its variants (DETRs) achieved impressive performance in general object detection. However, in crowded pedestrian detection, the performance of DETRs is still unsatisfactory due to the inappropriate sample selection method which results in more false positives. To settle the issue, we proposed a simple but effective sample selection method for DETRs, Sample Selection for Crowded Pedestrians (SSCP), which consists of the constraint-guided label assignment scheme (CGLA) and the utilizability-aware focal loss (UAFL). Our core idea is to select learnable samples for DETRs and adaptively regulate the loss weights of samples based on their utilizability. Specifically, in CGLA, we proposed a new cost function to ensure that only learnable positive training samples are retained and the rest are negative training samples. Further, considering the utilizability of samples, we designed UAFL to adaptively assign different loss weights to learnable positive samples depending on their gradient ratio and IoU. 
+                                                Drone-view Object Detection (DOD) is a meaningful but challenging task. It hits a bottleneck due to two main reasons: (1) The high proportion of difficult objects (e.g., small objects, occluded objects, etc.) makes the detection performance unsatisfactory. (2) The unevenly distributed objects make detection inefficient. These two factors also lead to a phenomenon, obeying the Pareto principle, that some challenging regions occupying a low area proportion of the image have a significant impact on the final detection while the vanilla regions occupying the major area have a negligible impact due to the limited room for performance improvement. Motivated by the human visual system that naturally attempts to invest unequal energies in things of hierarchical difficulty for recognizing objects effectively, this paper presents a novel Pareto Refocusing Detection (PRDet) network that distinguishes the challenging regions from the vanilla regions under reverse-attention guidance and refocuses the challenging regions with the assistance of the region-specific context. Specifically, we first propose a Reverse-attention Exploration Module (REM) that excavates the potential position of difficult objects by suppressing the features which are salient to the commonly used detector. Then, we propose a Region-specific Context Learning Module (RCLM) that learns to generate specific contexts for strengthening the understanding of challenging regions. It is noteworthy that the specific context is not shared globally but unique for each challenging region with the exploration of spatial and appearance cues. 
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2023</span>
+                                            <span class="fst-italic">IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), 2022</span>
                                         </div>
                                     </div>
                                 </div>
                                  <!--单个论文开始6-->
-
+                                
                                 <!--单个论文开始7-->
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-start">
@@ -295,17 +295,17 @@
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Selecting Learnable Training Samples is All DETRs Need in Crowded Pedestrian Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
+                                                <span>CrossNet: Detecting Objects as Crosses</span>
+                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/9357941" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Feng Gao,  Jiaxu Leng*, Ji Gan, and Xinbo Gao*
+                                            Jiaxu Leng*; Ying Liu; Zhihui Wang; Haibo Hu; Xinbo Gao
                                             <hr class="divider">
                                             <p>
-                                                DEtection TRansformer (DETR) and its variants (DETRs) achieved impressive performance in general object detection. However, in crowded pedestrian detection, the performance of DETRs is still unsatisfactory due to the inappropriate sample selection method which results in more false positives. To settle the issue, we proposed a simple but effective sample selection method for DETRs, Sample Selection for Crowded Pedestrians (SSCP), which consists of the constraint-guided label assignment scheme (CGLA) and the utilizability-aware focal loss (UAFL). Our core idea is to select learnable samples for DETRs and adaptively regulate the loss weights of samples based on their utilizability. Specifically, in CGLA, we proposed a new cost function to ensure that only learnable positive training samples are retained and the rest are negative training samples. Further, considering the utilizability of samples, we designed UAFL to adaptively assign different loss weights to learnable positive samples depending on their gradient ratio and IoU. 
+                                                With the use of deep learning, object detection has achieved great breakthroughs. However, existing object detection methods still can not cope with challenging environments, such as dense objects, small objects, and object scale variations. To address these issues, this paper proposes a novel keypoint-based detection framework, called CrossNet, which significantly improves detection performance with minimal costs. In our approach, an object is modeled as a cross that consists of a center keypoint and a specific size, which eliminates the need of hand-craft anchor design. The proposed CrossNet outputs three types of maps: the center map, size map, and offset map, where both center map and offset map are to predict the center keypoints of objects and the size map is to estimate the sizes (width and height) of objects. Specifically, we first design a cascaded center prediction method that introduces a coarse-to-fine idea to improve center prediction. Furthermore, since center prediction considered as a classification task is easier than size regression relatively, we design a center-attention size regression module that uses the detection results of centers to assist the size prediction. In addition, a slightly modified hourglass network is designed to enhance the quality of feature maps for center and size prediction.
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2023</span>
+                                            <span class="fst-italic">IEEE Transactions on Multimedia (IEEE TMM), 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -319,17 +319,17 @@
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Selecting Learnable Training Samples is All DETRs Need in Crowded Pedestrian Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
+                                                <span>Robust Obstacle Detection and Recognition for Driver Assistance Systems</span>
+                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/8691693" target="_blank">
                                                     <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
                                                 </a>
                                             </h5>
-                                            Feng Gao,  Jiaxu Leng*, Ji Gan, and Xinbo Gao*
+                                            Jiaxu Leng; Ying Liu*; Dawei Du; Tianlin Zhang; Pei Quan
                                             <hr class="divider">
                                             <p>
-                                                DEtection TRansformer (DETR) and its variants (DETRs) achieved impressive performance in general object detection. However, in crowded pedestrian detection, the performance of DETRs is still unsatisfactory due to the inappropriate sample selection method which results in more false positives. To settle the issue, we proposed a simple but effective sample selection method for DETRs, Sample Selection for Crowded Pedestrians (SSCP), which consists of the constraint-guided label assignment scheme (CGLA) and the utilizability-aware focal loss (UAFL). Our core idea is to select learnable samples for DETRs and adaptively regulate the loss weights of samples based on their utilizability. Specifically, in CGLA, we proposed a new cost function to ensure that only learnable positive training samples are retained and the rest are negative training samples. Further, considering the utilizability of samples, we designed UAFL to adaptively assign different loss weights to learnable positive samples depending on their gradient ratio and IoU. 
+                                                This paper proposes a robust obstacle detection and recognition method for driver assistance systems. Unlike existing methods, our method aims to detect and recognize obstacles on the road rather than all the obstacles in the view. The proposed method involves two stages aiming at an increased quality of the results. The first stage is to locate the positions of obstacles on the road. In order to accurately locate the on-road obstacles, we propose an obstacle detection method based on the U-V disparity map generated from a stereo vision system. The proposed U-V disparity algorithm makes use of the V-disparity map that provides a good representation of the geometric content of the road region to extract the road features, and then detects the on-road obstacles using our proposed realistic U-disparity map that eliminates the foreshortening effects caused by the perspective projection of pinhole imaging. The proposed realistic U-disparity map greatly improves the detection accuracy of the distant obstacles compared with the conventional U-disparity map. Second, the detection results of our proposed U-V disparity algorithm are put into a context-aware Faster-RCNN that combines the interior and contextual features to improve the recognition accuracy of small and occluded obstacles. Specifically, we propose a context-aware module and apply it into the architecture of Faster-RCNN. 
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2023</span>
+                                            <span class="fst-italic">IEEE Transactions on Intellig Transportation Systems(IEEE TITS), 2020</span>
                                         </div>
                                     </div>
                                 </div>
