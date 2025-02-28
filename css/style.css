@@ -502,3 +502,92 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* 新闻列表容器 */
+.news-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 标题样式 */
+.news-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0070C0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 滚动区域 */
+.news-list-wrapper {
+    max-height: 400px; /* 限制高度 */
+    overflow-y: hidden; /* 禁止手动滚动，改为动画 */
+    position: relative;
+}
+
+/* 新闻列表 */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    animation: scrollNews 45s linear infinite; /* 15秒完成一轮滚动 */
+}
+
+/* 单条新闻 */
+.news-list li {
+    padding: 15px 20px;
+    font-size: 18px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    text-align: left;
+}
+
+/* 鼠标悬停时高亮 */
+.news-list li:hover {
+    background: #e6f7ff;
+}
+
+/* 日期样式 */
+.news-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    margin-right: 10px;
+}
+
+/* 关键词高亮 */
+.news-list strong {
+    color: #0070C0;
+}
+
+/* 祝贺信息高亮 */
+.congrats {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* 🎥 CSS 无缝循环滚动动画 */
+@keyframes scrollNews {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); } /* 向上滚动半个列表高度（因为内容翻倍了） */
+}
+
+/* 悬停时暂停自动滚动 */
+.news-list-wrapper:hover .news-list {
+    animation-play-state: paused;
+}
+
+
+
+
+
