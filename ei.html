@@ -34,9 +34,17 @@
             height: auto; /* 高度自适应 */
             transition: transform 0.4s ease; /* 设置变换的过渡效果 */
         }
+    
         /* 鼠标悬停在图片容器上时应用的放大效果 */
-        .col-lg-3 col-sm-3:hover .zoom-image {
-            transform: scale(1.2); /* 鼠标悬停时将图片放大20% */
+        .col-lg-3:hover .zoom-image,
+        .col-sm-3:hover .zoom-image {
+            transform: scale(3); /* 鼠标悬停时将图片放大20% */
+        }
+    
+        .divider {
+            border: none;
+            border-top: 1px solid #141313; /* 灰色分割线 */
+            margin: 10px 0; /* 设置上下间距 */
         }
     </style>
 </head>
