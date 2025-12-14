@@ -720,6 +720,10 @@
   transition: transform 420ms cubic-bezier(.2,.9,.2,1);
   transform-origin: center center;
   will-change: transform;
+  -webkit-transition: transform 420ms cubic-bezier(.2,.9,.2,1);
+  -moz-transition: transform 420ms cubic-bezier(.2,.9,.2,1);
+  -ms-transition: transform 420ms cubic-bezier(.2,.9,.2,1);
+  -o-transition: transform 420ms cubic-bezier(.2,.9,.2,1);
 }
 
 /* date badge */
@@ -895,3 +899,702 @@
   color:#d7e4fa;
 }
 .tvi-vmv-back ul{margin-top:10px;padding-left:18px;font-size:13px}
+
+/* new */
+.research-projects-container{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+
+
+/*  */
+.pub-item{
+    position:relative;
+    padding:12px 0;
+    line-height:1.6;
+    width:100%;
+    cursor:text;
+}
+
+.pub-title{
+    cursor: text;
+    font-size:16px;
+    font-weight:600;
+}
+
+.pub-author{
+    cursor: text;
+    font-size:14px;
+}
+
+.pub-venue{
+        cursor: text;
+    /* font-size:30px; */
+    opacity:0.75;
+}
+
+/******** popup ********/
+.pub-popup{
+        cursor: text;
+    position:absolute;
+    top:50%;
+    left:105%;
+    transform:translateY(-50%) translateX(10px);
+    width:300px;
+    background:#fff;
+    padding:14px;
+    border-radius:12px;
+    box-shadow:0 12px 36px rgba(0,0,0,.18);
+    opacity:0;
+    pointer-events:none;
+    transition:.35s ease-in-out;
+    z-index:999;
+}
+
+/* default image */
+.pub-popup img{
+    width:100%;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+.pub-popup p{
+    font-size:14px;
+}
+
+.pub-more{
+    color:#265bff;
+    font-size:13px;
+}
+
+.pub-item:hover .pub-popup{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(-50%) translateX(0px);
+}
+/* --- 基础卡片设置 --- */
+.rp-card {
+    position: relative; /* 关键：为绝对定位的 detail 提供参照 */
+    width: 320px;       /* 您可以根据需要调整宽度 */
+    height: 400px;      /* 固定高度是必须的，保证布局稳定 */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;   /* 关键：隐藏溢出的内容 */
+    cursor: pointer;    /* 鼠标变手型，提示可点击 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    
+    /* 居中对齐默认内容 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.rp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- 默认视图样式 (图标标题等) --- */
+.rp-default-view {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 悬停时，默认内容稍微变淡并上移，制造空间感 */
+.rp-card:hover .rp-default-view {
+    opacity: 0.2;
+    transform: translateY(-20px);
+    filter: blur(2px); /* 可选：增加一点模糊感 */
+}
+
+.rp-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.rp-sub {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* --- 悬停详情层 (rp-detail) --- */
+.rp-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95); /* 95% 不透明白色背景 */
+    
+    /* 布局 */
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 内容垂直居中 */
+    text-align: left;
+    box-sizing: border-box; /* 确保 padding 不撑大盒子 */
+
+    /* 初始隐身状态 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* 初始位置向下偏移 20px */
+    
+    /* 动画过渡 */
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 悬停激活状态 */
+.rp-card:hover .rp-detail {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* 回到原位 */
+}
+
+/* --- Detail 内部元素的样式微调 --- */
+.rp-intro-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.rp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.rp-tag {
+    font-size: 0.75rem;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.rp-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.rp-abstract {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    /* 限制行数 */
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.rp-read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    transition: gap 0.2s;
+    position: absolute;
+/* bottom:0.5% ; */
+    right: 10px; 
+}
+
+.rp-read-more-btn:hover {
+    gap: 8px;
+}
+
+.rp-footer{
+    position: relative;
+}
+/* --- Research Directions Section Styles --- */
+
+/* 主容器：控制整体宽度和内边距 */
+.research-directions-container {
+    max-width: 1200px; /* 最大宽度，避免在大屏上太散 */
+    margin: 40px auto; /* 居中显示，上下留白 */
+    padding: 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+/* 单个研究方向条目 (Flex 布局容器) */
+.rd-item {
+    display: flex;
+    align-items: flex-start; /* 内容顶部对齐 */
+    gap: 50px; /* 图片和文字之间的间距 */
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #e5e7eb; /* 每个方向之间加一条淡分割线 */
+}
+
+/* 最后一个条目去掉底部分割线 */
+.rd-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* --- 左侧：图片盒子 --- */
+.rd-image-box {
+    flex: 1; /* 占用 1 份空间 */
+    min-width: 350px; /* 保证图片不会被压得太小 */
+    /* 可选：给图片区域加一个淡淡的背景框，增加专业感 */
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eaecf0;
+}
+
+.rd-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    /* 加上轻微的阴影，让示意图更突出，但不是浮动 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 图片下方的说明文字 (可选) */
+.rd-img-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 12px;
+}
+
+/* --- 右侧：内容盒子 --- */
+.rd-content-box {
+    flex: 1.2; /* 占用 1.2 份空间，让文字区域稍微宽一点 */
+}
+
+/* 标题 */
+.rd-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827; /* 深黑色 */
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+/* 介绍文字段落 */
+.rd-intro p {
+    font-size: 1.05rem;
+    line-height: 1.7; /* 增加行高，提升阅读体验 */
+    color: #4b5563; /* 深灰色，不那么刺眼 */
+    margin-bottom: 16px;
+    text-align: justify; /* 两端对齐 */
+}
+
+/* --- 关键词部分 --- */
+.rd-keywords-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    text-transform: uppercase; /* 大写标签 */
+    letter-spacing: 0.05em;
+}
+
+.rd-keywords {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 10px;
+    justify-content: space-between; /* 在每行中均匀分布 */
+}
+
+.rd-keyword {
+    /* 使用科研常蓝紫色调 */
+    background-color: #eef2ff;
+    color: #4f46e5;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px; /* 圆角胶囊状 */
+    border: 1px solid #e0e7ff;
+    
+    /* 每个关键词占一行的 45% 宽度，并且保持两个在一行中 */
+    flex: 0 0 45%; /* 每个关键词宽度为容器宽度的45% */
+    display: flex;
+    justify-content: center; /* 使每个关键词居中 */
+}
+
+.rd-keywords > .rd-keyword:nth-child(odd) {
+    margin-right: 10px; /* 让奇数元素有右边距，以避免它们过于靠近 */
+}
+
+
+
+/* --- 响应式设计 (适配手机和平板) --- */
+@media (max-width: 850px) {
+    .rd-item {
+        flex-direction: column; /* 改为垂直堆叠 */
+        gap: 30px;
+    }
+
+    .rd-image-box {
+        width: 100%; /* 图片占满全宽 */
+        min-width: auto;
+        padding: 10px;
+    }
+    
+    .rd-title {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+    }
+}
+/* contact */
+/* 基础变量 - 可根据你们团队的配色修改 */
+:root {
+  --lab-primary: #0056b3; /* 实验室主色调 (如校徽蓝) */
+  --lab-accent: #00a8cc;  /* 辅助色 */
+  --lab-bg: #f9f9f9;
+  --lab-text: #333;
+  --lab-border: #e0e0e0;
+}
+
+.lab-contact-section {
+  padding: 60px 20px;
+  background-color: var(--lab-bg);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--lab-text);
+}
+
+.lab-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap; /* 适配移动端 */
+}
+
+/* --- 左侧布局 --- */
+.lab-info-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.lab-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--lab-primary);
+}
+
+.lab-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* 邮箱卡片样式 */
+.lab-email-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.lab-email-card:hover {
+  transform: translateY(-2px);
+}
+
+.email-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--lab-primary);
+  margin-right: 15px;
+}
+
+.email-details {
+  flex-grow: 1;
+}
+
+.email-details .label {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.email-details a {
+  text-decoration: none;
+  color: var(--lab-text);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.2s;
+  color: #888;
+}
+
+.copy-btn:hover {
+  background: #f0f0f0;
+  color: var(--lab-primary);
+}
+
+.copy-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 复制成功的提示 */
+#copy-tooltip {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* 地图样式 */
+.lab-map-wrapper {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+}
+
+.lab-address-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* --- 右侧表单布局 --- */
+.lab-form-col {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.lab-form-col h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: var(--lab-primary);
+}
+
+/* 浮动标签交互样式 */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background: transparent;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+  resize: none; /* 禁止拖动大小 */
+}
+
+.form-group select {
+  padding: 12px 0;
+  color: #333;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: -12px;
+  font-size: 12px;
+  color: var(--lab-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-bottom-color: var(--lab-primary);
+}
+
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--lab-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #004494;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Loading 动画圆圈 */
+.loading-spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .lab-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .lab-form-col {
+    padding: 25px;
+  }
+}
+/* 研究领域主容器样式 */
+#research-areas-container {
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #eee; /* 简单分隔 */
+}
+
+.research-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    border-left: 5px solid #007bff; /* 突出标题 */
+    padding-left: 10px;
+}
+
+/* 两个卡片的容器：使用 Flexbox 进行横向排列 */
+.research-cards {
+    display: flex;
+    gap: 20px; /* 卡片之间的间距 */
+    flex-wrap: wrap; /* 适应小屏幕 */
+}
+
+/* 单个研究领域卡片样式 */
+.research-card {
+    flex: 1; /* 每个卡片平均分配空间 */
+    min-width: 300px; /* 最小宽度，防止过小 */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* 鼠标悬停时显示可点击 */
+    display: flex;
+    align-items: flex-start; /* Logo和内容顶部对齐 */
+}
+
+/* 交互效果：鼠标悬停时轻微抬起 */
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo/图标容器样式 */
+.logo-container {
+    margin-right: 15px;
+}
+
+.research-icon {
+    font-size: 3em; /* 图标尺寸 */
+    color: #007bff; /* 默认蓝色 */
+}
+
+/* 不同的领域可以有不同的颜色 */
+.area1-icon {
+    color: #007bff; /* 蓝色 */
+}
+
+.area2-icon {
+    color: #28a745; /* 绿色 */
+}
+
+/* 信息容器样式 */
+.info-container {
+    flex-grow: 1;
+}
+
+.area-name {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.area-brief {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* 激活/选中状态的样式 (将由 JS 添加/移除) */
+.research-card.active {
+    border: 2px solid #dc3545; /* 醒目的边框 */
+    background-color: #fff0f0; /* 略红的背景 */
+}

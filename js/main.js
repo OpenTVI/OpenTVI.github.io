@@ -219,3 +219,175 @@ window.addEventListener('scroll', function() {
     flipCard.addEventListener('click', ()=> flipCard.classList.toggle('flipped'));
   }
 })();
+
+// 扩展卡片效果
+document.querySelectorAll('.rp-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const target=document.querySelector('#selected-publications');
+    if(target) target.scrollIntoView({behavior:"smooth"});
+  });
+});
+document.querySelectorAll('.pub-item').forEach(item=>{
+    
+    let popup = item.querySelector('.pub-popup');
+    let timer;
+
+    item.addEventListener('mouseenter', ()=>{
+        clearTimeout(timer);
+        popup.style.opacity=1;
+    });
+
+    item.addEventListener('mouseleave', ()=>{
+        timer=setTimeout(()=>popup.style.opacity=0,200);
+    });
+
+    popup.addEventListener('mouseenter', ()=>{
+        clearTimeout(timer);
+    });
+
+    popup.addEventListener('mouseleave', ()=>{
+        timer=setTimeout(()=>popup.style.opacity=0,200);
+    });
+
+});
+// new
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取所有的研究卡片
+    const cards = document.querySelectorAll('.rp-card');
+
+    cards.forEach(card => {
+        // 1. 整卡点击效果
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('.rp-tag') || e.target.closest('a')) {
+                return;
+            }
+                        const mainLink = card.querySelector('.rp-title a') || card.querySelector('.rp-read-more-btn');
+            
+            if (mainLink) {
+                mainLink.click();
+            }
+        });
+
+        card.addEventListener('mousemove', function(e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const xPct = (x / rect.width) - 0.5;
+            const yPct = (y / rect.height) - 0.5;
+            card.style.transform = `
+                perspective(1000px) 
+                rotateY(${xPct * 5}deg) 
+                rotateX(${yPct * -5}deg) 
+                translateY(-5px)
+            `;
+        });
+
+        // 鼠标移出时复原
+        card.addEventListener('mouseleave', function() {
+            card.style.transform = 'translateY(0) rotateY(0) rotateX(0)';
+        });
+    });
+});
+// research界面中Research Projects
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.rp-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+
+            const cardUrl = this.getAttribute('data-url');
+            if (e.target.closest('.rp-read-more-btn')) {
+
+                return; 
+            }
+            if (cardUrl) {
+                window.open(cardUrl, '_blank');
+            }
+        });
+    });
+});
+// contact
+
+  // 1. 复制邮箱到剪贴板功能
+  function copyEmail() {
+    const emailText = document.getElementById('prof-email').innerText;
+    const tooltip = document.getElementById('copy-tooltip');
+    
+    navigator.clipboard.writeText(emailText).then(() => {
+      // 显示提示
+      tooltip.style.opacity = '1';
+      // 2秒后隐藏提示
+      setTimeout(() => {
+        tooltip.style.opacity = '0';
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+
+  // 2. 表单提交交互 (模拟)
+  function handleFormSubmit(event) {
+    event.preventDefault(); // 阻止默认的页面刷新
+    
+    const form = event.target;
+    const btn = form.querySelector('.submit-btn');
+    const btnText = form.querySelector('.btn-text');
+    const spinner = form.querySelector('.loading-spinner');
+
+    // 切换到 Loading 状态
+    btn.disabled = true;
+    btnText.innerText = 'Sending...';
+    spinner.style.display = 'block';
+
+    // 获取表单数据 (如果需要对接后端，在这里提取数据)
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log('Form Data Collected:', data);
+
+    // --- 模拟网络请求 (3秒延迟) ---
+    // 在实际开发中，这里需要替换为 fetch() 请求发送给后端 API (如 Formspree, EmailJS)
+    setTimeout(() => {
+      // 成功状态
+      btnText.innerText = 'Message Sent!';
+      spinner.style.display = 'none';
+      btn.style.backgroundColor = '#28a745'; // 绿色表示成功
+
+      // 重置表单
+      form.reset();
+
+      // 3秒后恢复按钮原状
+      setTimeout(() => {
+        btn.disabled = false;
+        btnText.innerText = 'Send Message';
+        btn.style.backgroundColor = ''; // 恢复默认颜色
+      }, 3000);
+      
+    }, 2000); 
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // 获取所有研究领域卡片
+    const researchCards = document.querySelectorAll('.research-card');
+
+    // 为每个卡片添加点击事件监听器
+    researchCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // 1. 移除所有卡片的 active 类
+            researchCards.forEach(c => {
+                c.classList.remove('active');
+            });
+
+            // 2. 为当前被点击的卡片添加 active 类
+            this.classList.add('active');
+
+            // 3. (可选) 打印信息到控制台，以便后续扩展
+            const areaName = this.querySelector('.area-name').textContent;
+            const areaData = this.getAttribute('data-area');
+            console.log(`研究领域被点击: ${areaName} (Data: ${areaData})`);
+
+            // *您可以在这里添加更多交互逻辑，例如弹出一个详细介绍的模态框*
+        });
+    });
+});
