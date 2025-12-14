@@ -310,15 +310,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // contact
 
-  // 1. 复制邮箱到剪贴板功能
   function copyEmail() {
     const emailText = document.getElementById('prof-email').innerText;
     const tooltip = document.getElementById('copy-tooltip');
     
     navigator.clipboard.writeText(emailText).then(() => {
-      // 显示提示
+
       tooltip.style.opacity = '1';
-      // 2秒后隐藏提示
+
       setTimeout(() => {
         tooltip.style.opacity = '0';
       }, 2000);
@@ -327,67 +326,104 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // 2. 表单提交交互 (模拟)
-  function handleFormSubmit(event) {
-    event.preventDefault(); // 阻止默认的页面刷新
-    
-    const form = event.target;
-    const btn = form.querySelector('.submit-btn');
-    const btnText = form.querySelector('.btn-text');
-    const spinner = form.querySelector('.loading-spinner');
 
-    // 切换到 Loading 状态
-    btn.disabled = true;
-    btnText.innerText = 'Sending...';
-    spinner.style.display = 'block';
-
-    // 获取表单数据 (如果需要对接后端，在这里提取数据)
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    console.log('Form Data Collected:', data);
-
-    // --- 模拟网络请求 (3秒延迟) ---
-    // 在实际开发中，这里需要替换为 fetch() 请求发送给后端 API (如 Formspree, EmailJS)
-    setTimeout(() => {
-      // 成功状态
-      btnText.innerText = 'Message Sent!';
-      spinner.style.display = 'none';
-      btn.style.backgroundColor = '#28a745'; // 绿色表示成功
-
-      // 重置表单
-      form.reset();
-
-      // 3秒后恢复按钮原状
-      setTimeout(() => {
-        btn.disabled = false;
-        btnText.innerText = 'Send Message';
-        btn.style.backgroundColor = ''; // 恢复默认颜色
-      }, 3000);
-      
-    }, 2000); 
-  }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // 获取所有研究领域卡片
     const researchCards = document.querySelectorAll('.research-card');
 
-    // 为每个卡片添加点击事件监听器
     researchCards.forEach(card => {
         card.addEventListener('click', function() {
-            // 1. 移除所有卡片的 active 类
             researchCards.forEach(c => {
                 c.classList.remove('active');
             });
 
-            // 2. 为当前被点击的卡片添加 active 类
             this.classList.add('active');
 
-            // 3. (可选) 打印信息到控制台，以便后续扩展
             const areaName = this.querySelector('.area-name').textContent;
             const areaData = this.getAttribute('data-area');
             console.log(`研究领域被点击: ${areaName} (Data: ${areaData})`);
 
-            // *您可以在这里添加更多交互逻辑，例如弹出一个详细介绍的模态框*
         });
     });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const card = document.getElementById('teamWechatCard');
+    const toast = document.getElementById('copyToast');
+
+    const wechatId = "gh_37904658ebb4"; 
+
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left; 
+        const y = e.clientY - rect.top;  
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -10; 
+        const rotateY = ((x - centerX) / centerX) * 10;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    });
+
+    card.addEventListener('click', () => {
+        navigator.clipboard.writeText(wechatId).then(() => {
+            showToast();
+        }).catch(err => {
+            console.error('复制失败:', err);
+        });
+    });
+
+    function showToast() {
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2000);
+    }
+});
+function copyEmail(btn) {
+    const email = btn.getAttribute('data-email');
+    const toast = document.getElementById("toast-msg");
+    const spanText = btn.querySelector('span');
+
+    navigator.clipboard.writeText(email).then(() => {
+        // 1. 显示底部 Toast 提示
+        toast.className = "show";
+        setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+
+        // 2. 按钮文字反馈
+        const originalText = spanText.innerText;
+        spanText.innerText = "已复制!";
+        btn.style.background = "#dcfce7"; // 浅绿色
+        btn.style.color = "#166534";
+
+        setTimeout(() => {
+            spanText.innerText = originalText;
+            btn.style.background = "white";
+            btn.style.color = "#1e293b"; // 恢复原色
+        }, 2000);
+    }).catch(err => {
+        console.error('Copy failed', err);
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.getElementById('videoWrapper');
+    const video = document.getElementById('researchVideo');
+    const poster = document.getElementById('videoPoster');
+
+    // 点击封面/播放按钮时的逻辑
+    poster.addEventListener('click', () => {
+        // 1. 隐藏封面
+        poster.classList.add('hidden');
+        
+        // 2. 显示原生控件 (进度条、音量等)
+        video.setAttribute('controls', 'true');
+        
+        // 3. 开始播放
+        video.play();
+    });
+
 });
