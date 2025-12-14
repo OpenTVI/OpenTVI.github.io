@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="utf-8">
     <title>TVI · Resources</title>
@@ -12,7 +11,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,21 +31,27 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         .zoom-image {
-            width: 100%; /* 图片占满容器宽度 */
-            height: auto; /* 高度自适应 */
-            transition: transform 0.4s ease; /* 设置变换的过渡效果 */
+            width: 100%;
+            /* 图片占满容器宽度 */
+            height: auto;
+            /* 高度自适应 */
+            transition: transform 0.4s ease;
+            /* 设置变换的过渡效果 */
         }
-    
+
         /* 鼠标悬停在图片容器上时应用的放大效果 */
         .col-lg-3:hover .zoom-image,
         .col-sm-3:hover .zoom-image {
-            transform: scale(3); /* 鼠标悬停时将图片放大20% */
+            transform: scale(3);
+            /* 鼠标悬停时将图片放大20% */
         }
-    
+
         .divider {
             border: none;
-            border-top: 1px solid #141313; /* 灰色分割线 */
-            margin: 10px 0; /* 设置上下间距 */
+            border-top: 1px solid #141313;
+            /* 灰色分割线 */
+            margin: 10px 0;
+            /* 设置上下间距 */
         }
     </style>
 </head>
@@ -52,7 +59,8 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -66,7 +74,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>IIP-XDU</h1> -->
-                    <img src="img/logo.png" alt="Logo" >
+                    <img src="img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -75,8 +83,9 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="team.html" class="nav-item nav-link">Team</a>
-                        <a href="research.html" class="nav-item nav-link">Research</a>
-                        <a href="resources.html" class="nav-item nav-link active">Resources</a>
+                        <a href="research.html" class="nav-item nav-link active">Research</a>
+                        <!-- <a href="resources.html" class="nav-item nav-link ">Resources</a> -->
+                        <a href="contact.html" class="nav-item nav-link">contact us</a>
                         <!--
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
@@ -87,7 +96,7 @@
                             </div>
                         </div>
                       -->
-                         
+
                     </div>
                     <!-- <a href="" class="nav-item nav-link"><i class="fa fa-2x fa-language text-primary "></i></a> -->
                 </div>
@@ -99,7 +108,8 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="https://github.com/OpenTVI/OpenTVI.github.io">Github</a></li>
+                            <li class="breadcrumb-item"><a
+                                    href="https://github.com/OpenTVI/OpenTVI.github.io">Github</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Resources</li>
                         </ol>
                     </nav>
@@ -108,26 +118,59 @@
         </div>
         <!-- Navbar & Hero End -->
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
+<!-- New About start-->
+        <section class="research-directions-container">
 
-                    <div class="col-lg-8-1">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Embodied Intelligence</h5>
-                        <p class="mb-4">Embodied intelligence is an important research area in robotics, artificial intelligence, and cognitive science, dedicated to developing intelligent systems that achieve cognition and decision-making through interactions between the body and the environment. This concept is crucial in applications such as humanoid robots and autonomous systems, aiming to enhance adaptability, robustness, and operational capability in complex environments. The core goal of embodied intelligence is to enable systems to perceive their surroundings, learn from interactions, and perform tasks efficiently through the synergy between physical embodiment and computation.This field faces numerous challenges, such as modeling the dynamic relationship between the body and the environment, achieving real-time integration of perception and action, and developing learning algorithms capable of adapting to diverse scenarios. Researchers often employ methods like reinforcement learning, bio-inspired design, and simulation testing to ensure that embodied intelligence systems are safe, efficient, and context-aware in practical applications.
+            <div class="rd-item">
+                <div class="rd-image-box">
+                    <img src="img2/EI.jpg" alt="EI Framework Schematic">
+                    <p class="rd-img-caption">EI Diagram</p>
+                                        <div class="rd-keywords-label">Key Focus Areas:</div>
+                    <div class="rd-keywords">
+                        <span class="rd-keyword">Human-Robot Interaction</span>
+                        <span class="rd-keyword">Sensorimotor Integration</span>
+                        <span class="rd-keyword">Adaptive Learning</span>
+                        <span class="rd-keyword">Embodied Cognition</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- About End -->
 
-         
+                <div class="rd-content-box">
+                    <h2 class="rd-title">Task Description</h2>
+
+                    <div class="rd-intro">
+                        <p>
+                          <strong> Embodied intelligence</strong>  is an important research area in robotics, artificial
+                            intelligence, and cognitive science, dedicated to developing intelligent systems that
+                            achieve cognition and decision-making through interactions between the body and the
+                            environment. This concept is crucial in applications such as humanoid robots and autonomous
+                            systems, aiming to enhance adaptability, robustness, and operational capability in complex
+                            environments. The core goal of embodied intelligence is to enable systems to perceive their
+                            surroundings, learn from interactions, and perform tasks efficiently through the synergy
+                            between physical embodiment and computation.This field faces numerous challenges, such as
+                            modeling the dynamic relationship between the body and the environment, achieving real-time
+                            integration of perception and action, and developing learning algorithms capable of adapting
+                            to diverse scenarios. Researchers often employ methods like reinforcement learning,
+                            bio-inspired design, and simulation testing to ensure that embodied intelligence systems are
+                            safe, efficient, and context-aware in practical applications.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- New About end -->
+
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Selected Papers </h5>
+                    <h1 class="mb-5">Exceptional Contribution</h1>
+                </div>
+
         <!-- Menu Start -->
 
         <div class="container-xxl py-5">
             <div class="container">
-              <!--
+                <!--
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Resources</h5>
                     <h1 class="mb-5">Most Popular Items</h1>
@@ -139,69 +182,103 @@
                     <div class="tab-content">
 
                         <div id="tab-1" class="tab-pane fade show p-0 active">
-                                <!--单个论文开始1-->
-                               <div class="col-lg-12">
-                                    <div class="d-flex align-items-start">
-                                        <div class="col-lg-3 col-sm-3">
-                                            <img src="./paper_img/ei_AAAI21.png" alt="Zoom Image" class="zoom-image">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>HiGAN: Handwriting Imitation Conditioned on Arbitrary-Length Texts and Disentangled Styles</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
-                                                    <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
-                                                </a>
-                                            </h5>
-                                              Ji Gan, Weiqiang Wang*
-                                            <hr class="divider">
-                                            <p>
-                                               Given limited handwriting scripts, humans can easily visualize (or imagine) what the handwritten words/texts would look like with other arbitrary textual contents. Moreover, a person also is able to imitate the handwriting styles of provided reference samples. Humans can do such hallucinations, perhaps because they can learn to disentangle the calligraphic styles and textual contents from given handwriting scripts. However, computers cannot study to do such flexible handwriting imitation with existing techniques.we propose a novel handwriting imitation generative adversarial network (HiGAN) to mimic such hallucinations. Specifically, HiGAN can generate variable-length handwritten words/texts conditioned on arbitrary textual contents, which are unconstrained to any predefined corpus or out-of-vocabulary words. Moreover, HiGAN can flexibly control the handwriting styles of syntheticimagesbydisentanglingcalligraphicstylesfromthe reference samples.
-                                            </p>
-                                            <span class="fst-italic">AAAI Conference on Artificial Intelligence,2021</span>
-                                        </div>
+                            <!--单个论文开始1-->
+                            <div class="col-lg-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="col-lg-3 col-sm-3">
+                                        <img src="./paper_img/ei_AAAI21.png" alt="Zoom Image" class="zoom-image">
                                     </div>
-                                </div>                           
-                                <!--单个论文开始2-->
-                               <div class="col-lg-12">
-                                    <div class="d-flex align-items-start">
-                                        <div class="col-lg-3 col-sm-3">
-                                            <img src="./paper_img/ei_TOG22.png" alt="Zoom Image" class="zoom-image">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>HiGAN+: Handwriting Imitation GAN with Disentangled Representations</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
-                                                    <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
-                                                </a>
-                                            </h5>
-                                            Ji Gan, Weiqiang Wang, Jiaxu Leng and Xinbo Gao
-                                            <hr class="divider">
-                                            <p>
-                                              Humans remain far better than machines at learning, where humans require fewer examples to learn new concepts and can use those concepts in richer ways. Take handwriting as an example, after learning from very limited handwriting scripts, a person can easily imagine what the hand-written texts would like with other arbitrary textual contents (even for unseen words or texts). Moreover, humans can also hallucinate to imitate calligraphic styles from just a single reference handwriting sample (that even have never seen before). Humans can do such hallucinations, perhaps because they can learn to disentangle the textual contents and calligraphic styles from handwriting images. Inspired by this, we propose a novel handwriting imitation generative adversarial network (HiGAN+) for realistic handwritten text synthesis based on disentangled representations. The proposed HiGAN+ can achieve a precise one-shot handwriting style transfer by introducing the writer-specific auxiliary loss and contextual loss, and it also attains a good global & local consistency by refining local details of synthetic handwriting images.
-                                            </p>
-                                            <span class="fst-italic">AAAI Conference on Artificial Intelligence,2021</span>
-                                        </div>
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
+                                            <span>HiGAN: Handwriting Imitation Conditioned on Arbitrary-Length Texts and
+                                                Disentangled Styles</span>
+                                            <a class="btn btn-square btn-primary mx-1"
+                                                href="https://link.springer.com/article/10.1007/s11263-025-02350-5"
+                                                target="_blank">
+                                                <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                            </a>
+                                        </h5>
+                                        Ji Gan, Weiqiang Wang*
+                                        <hr class="divider">
+                                        <p>
+                                            Given limited handwriting scripts, humans can easily visualize (or imagine)
+                                            what the handwritten words/texts would look like with other arbitrary
+                                            textual contents. Moreover, a person also is able to imitate the handwriting
+                                            styles of provided reference samples. Humans can do such hallucinations,
+                                            perhaps because they can learn to disentangle the calligraphic styles and
+                                            textual contents from given handwriting scripts. However, computers cannot
+                                            study to do such flexible handwriting imitation with existing techniques.we
+                                            propose a novel handwriting imitation generative adversarial network (HiGAN)
+                                            to mimic such hallucinations. Specifically, HiGAN can generate
+                                            variable-length handwritten words/texts conditioned on arbitrary textual
+                                            contents, which are unconstrained to any predefined corpus or
+                                            out-of-vocabulary words. Moreover, HiGAN can flexibly control the
+                                            handwriting styles of
+                                            syntheticimagesbydisentanglingcalligraphicstylesfromthe reference samples.
+                                        </p>
+                                        <span class="fst-italic">AAAI Conference on Artificial Intelligence,2021</span>
                                     </div>
-                                </div>                         
+                                </div>
+                            </div>
+                            <!--单个论文开始2-->
+                            <div class="col-lg-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="col-lg-3 col-sm-3">
+                                        <img src="./paper_img/ei_TOG22.png" alt="Zoom Image" class="zoom-image">
+                                    </div>
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
+                                            <span>HiGAN+: Handwriting Imitation GAN with Disentangled
+                                                Representations</span>
+                                            <a class="btn btn-square btn-primary mx-1"
+                                                href="https://link.springer.com/article/10.1007/s11263-025-02350-5"
+                                                target="_blank">
+                                                <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                            </a>
+                                        </h5>
+                                        Ji Gan, Weiqiang Wang, Jiaxu Leng and Xinbo Gao
+                                        <hr class="divider">
+                                        <p>
+                                            Humans remain far better than machines at learning, where humans require
+                                            fewer examples to learn new concepts and can use those concepts in richer
+                                            ways. Take handwriting as an example, after learning from very limited
+                                            handwriting scripts, a person can easily imagine what the hand-written texts
+                                            would like with other arbitrary textual contents (even for unseen words or
+                                            texts). Moreover, humans can also hallucinate to imitate calligraphic styles
+                                            from just a single reference handwriting sample (that even have never seen
+                                            before). Humans can do such hallucinations, perhaps because they can learn
+                                            to disentangle the textual contents and calligraphic styles from handwriting
+                                            images. Inspired by this, we propose a novel handwriting imitation
+                                            generative adversarial network (HiGAN+) for realistic handwritten text
+                                            synthesis based on disentangled representations. The proposed HiGAN+ can
+                                            achieve a precise one-shot handwriting style transfer by introducing the
+                                            writer-specific auxiliary loss and contextual loss, and it also attains a
+                                            good global & local consistency by refining local details of synthetic
+                                            handwriting images.
+                                        </p>
+                                        <span class="fst-italic">AAAI Conference on Artificial Intelligence,2021</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        
-
-
-
-
-
-
                     </div>
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
-        <!-- Menu End -->
+    </div>
+    <!-- Menu End -->
 
 
-        <!-- Footer Start -->
-<!--         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- Footer Start -->
+    <!--         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -260,48 +337,52 @@
                 </div>
             </div>
         </div> -->
-                <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Laboratory</h4>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Laboratory</h4>
 
-                        <a class="btn btn-link" href="index.html" class="nav-item nav-link">About Us</a>
-                        <a class="btn btn-link" href="team.html" class="nav-item nav-link">Team Members</a>
-                        <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research Topics</a>
-                        <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
-                        <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact Us</a>
-                        <!--
+                    <a class="btn btn-link" href="index.html" class="nav-item nav-link">About Us</a>
+                    <a class="btn btn-link" href="team.html" class="nav-item nav-link">Team Members</a>
+                    <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research Topics</a>
+                    <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
+                    <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <!--
                         <a class="btn btn-link" href="">Reservation</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                         <img class="flex-shrink-0 img-fluid rounded" src="img/iip_white2.png" alt="" style="width: 200px;">
                       -->
 
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 2 Chongwen Road, Nan'an District, Chongqing, </p>
-                        <p class="mb-2"><i class="fa fa-globe me-3"></i>CQUPT, ChongQing 10617, China</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>lengjx <i class="fa fa-at"></i> cqupt.edu.cn</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-weixin"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/OpenTVI/OpenTVI.github.io" target="_blank"><i class="fab fa-github"></i></a>
-                            <!--
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 2 Chongwen Road, Nan'an District,
+                        Chongqing, </p>
+                    <p class="mb-2"><i class="fa fa-globe me-3"></i>CQUPT, ChongQing 10617, China</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>lengjx <i class="fa fa-at"></i> cqupt.edu.cn</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-weixin"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/OpenTVI/OpenTVI.github.io"
+                            target="_blank"><i class="fab fa-github"></i></a>
+                        <!--
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                           -->
-                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Links</h4>
-                        <a class="btn btn-link" href="https://www.cqupt.edu.cn/" target="_blank">CQUPT</a>
-                        <a class="btn btn-link" href="https://see.xidian.edu.cn/faculty/xbgao/" target="_blank">VIPSL (Xinbo Gao) </a>
-                        <a class="btn btn-link" href="https://www.researchgate.net/profile/Jiaxu-Leng-2" target="_blank">Home (Jiaxu Leng) </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Pages</h4>
-                        <!--
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Links</h4>
+                    <a class="btn btn-link" href="https://www.cqupt.edu.cn/" target="_blank">CQUPT</a>
+                    <a class="btn btn-link" href="https://see.xidian.edu.cn/faculty/xbgao/" target="_blank">VIPSL (Xinbo
+                        Gao) </a>
+                    <a class="btn btn-link" href="https://www.researchgate.net/profile/Jiaxu-Leng-2"
+                        target="_blank">Home (Jiaxu Leng) </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Pages</h4>
+                    <!--
                         <p>You can try our work.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
@@ -309,40 +390,40 @@
                         </div>
                         <img class="img-fluid flex-shrink-0 rounded-circle" src="img/applet.png" style="width: 50px; height: 50px;">
                       -->
-                        <a class="btn btn-link" href="index.html" class="nav-item nav-link">Home</a>
-                        <a class="btn btn-link" href="team.html" class="nav-item nav-link">Team</a>
-                        <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research</a>
-                        <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
-                        <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
+                    <a class="btn btn-link" href="index.html" class="nav-item nav-link">Home</a>
+                    <a class="btn btn-link" href="team.html" class="nav-item nav-link">Team</a>
+                    <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research</a>
+                    <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
+                    <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">TVI Group.</a>, All Right Reserved.
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">TVI Group.</a>, All Right Reserved.
 
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->

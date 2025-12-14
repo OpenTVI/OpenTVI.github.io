@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="utf-8">
     <title>TVI · Resources</title>
@@ -12,7 +11,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,30 +31,37 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         .zoom-image {
-            width: 100%; /* 图片占满容器宽度 */
-            height: auto; /* 高度自适应 */
-            transition: transform 0.4s ease; /* 设置变换的过渡效果 */
+            width: 100%;
+            /* 图片占满容器宽度 */
+            height: auto;
+            /* 高度自适应 */
+            transition: transform 0.4s ease;
+            /* 设置变换的过渡效果 */
         }
-    
+
         /* 鼠标悬停在图片容器上时应用的放大效果 */
         .col-lg-3:hover .zoom-image,
         .col-sm-3:hover .zoom-image {
-            transform: scale(3); /* 鼠标悬停时将图片放大20% */
+            transform: scale(3);
+            /* 鼠标悬停时将图片放大20% */
         }
-    
+
         .divider {
             border: none;
-            border-top: 1px solid #141313; /* 灰色分割线 */
-            margin: 10px 0; /* 设置上下间距 */
+            border-top: 1px solid #141313;
+            /* 灰色分割线 */
+            margin: 10px 0;
+            /* 设置上下间距 */
         }
     </style>
-    
+
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -67,7 +75,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>IIP-XDU</h1> -->
-                    <img src="img/logo.png" alt="Logo" >
+                    <img src="img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -76,8 +84,9 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="team.html" class="nav-item nav-link">Team</a>
-                        <a href="research.html" class="nav-item nav-link">Research</a>
-                        <a href="resources.html" class="nav-item nav-link active">Resources</a>
+                        <a href="research.html" class="nav-item nav-link active">Research</a>
+                        <!-- <a href="resources.html" class="nav-item nav-link ">Resources</a> -->
+                        <a href="contact.html" class="nav-item nav-link">contact us</a>
                         <!--
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
@@ -88,7 +97,7 @@
                             </div>
                         </div>
                       -->
-                         
+
                     </div>
                     <!-- <a href="" class="nav-item nav-link"><i class="fa fa-2x fa-language text-primary "></i></a> -->
                 </div>
@@ -100,7 +109,8 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="https://github.com/OpenTVI/OpenTVI.github.io">Github</a></li>
+                            <li class="breadcrumb-item"><a
+                                    href="https://github.com/OpenTVI/OpenTVI.github.io">Github</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Resources</li>
                         </ol>
                     </nav>
@@ -109,27 +119,60 @@
         </div>
         <!-- Navbar & Hero End -->
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
 
-                    <div class="col-lg-8-1">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Video Intelligent Analysis</h5>
-                        <p class="mb-4">Video Anomaly Detection is a significant research area within the fields of computer vision and machine learning, aimed at automatically identifying unusual or irregular behaviors within video data. This technology is crucial for applications such as surveillance, security monitoring, traffic control, and healthcare monitoring, where it enhances efficiency and reduces reliance on human oversight. The primary goal of video anomaly detection is to automatically flag events or activities that deviate from learned normal behavior patterns, which are typically established through training data. This field faces key challenges including the diversity and ambiguity in defining what constitutes an anomaly, the scarcity of labeled anomaly data which limits the use of traditional supervised learning models, and the need for real-time processing capabilities to handle large-scale video data effectively. As such, researchers in this domain often employ unsupervised learning techniques to detect anomalies due to the rarity of anomaly instances, and also explore semi-supervised and few-shot learning paradigms to better leverage limited labeled data.</p>
-                    
+        <!-- New About start-->
+        <section class="research-directions-container">
+
+            <div class="rd-item">
+                <div class="rd-image-box">
+                    <img src="img2/VAD.jpg" alt="VAD Framework Schematic">
+                    <p class="rd-img-caption">VAD Framework Diagram</p>
+                    <div class="rd-keywords-label">Key Focus Areas:</div>
+                    <div class="rd-keywords">
+                        <span class="rd-keyword">Computer Vision</span>
+                        <span class="rd-keyword">Temporal Anomaly Detection</span>
+                        <span class="rd-keyword">Motion Analysis</span>
+                        <span class="rd-keyword">Contextual Understanding</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- About End -->
 
-         
+                <div class="rd-content-box">
+                    <h2 class="rd-title">Task Description</h2>
+
+                    <div class="rd-intro">
+                        <p>
+                            <strong>Video Anomaly Detection </strong>is a significant research area within the fields of
+                            computer vision and machine learning, aimed at automatically identifying unusual or
+                            irregular behaviors within video data. This technology is crucial for applications such as
+                            surveillance, security monitoring, traffic control, and healthcare monitoring, where it
+                            enhances efficiency and reduces reliance on human oversight. The primary goal of video
+                            anomaly detection is to automatically flag events or activities that deviate from learned
+                            normal behavior patterns, which are typically established through training data. This field
+                            faces key challenges including the diversity and ambiguity in defining what constitutes an
+                            anomaly, the scarcity of labeled anomaly data which limits the use of traditional supervised
+                            learning models, and the need for real-time processing capabilities to handle large-scale
+                            video data effectively. As such, researchers in this domain often employ unsupervised
+                            learning techniques to detect anomalies due to the rarity of anomaly instances, and also
+                            explore semi-supervised and few-shot learning paradigms to better leverage limited labeled
+                            data.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- New About end -->
+
+        <div class="text-center">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Selected Papers </h5>
+            <h1 class="mb-5">Exceptional Contribution</h1>
+        </div>
         <!-- Menu Start -->
 
         <div class="container-xxl py-5">
             <div class="container">
-              <!--
+                <!--
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Resources</h5>
                     <h1 class="mb-5">Most Popular Items</h1>
@@ -142,6 +185,135 @@
 
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
+                                <!--单个论文开始-->
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="col-lg-3 col-sm-3">
+                                            <img src="./paper_img/2025-9-TPAMI.png" alt="Zoom Image" class="zoom-image">
+                                        </div>
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>PiercingEye: Dual-Space Video Violence Detection with Hyperbolic
+                                                    Vision-Language Guidance</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://pubmed.ncbi.nlm.nih.gov/41052185/">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
+                                                </a>
+                                            </h5>
+                                            Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Mengjingcheng Mo, Jiankang Zheng, Qingqing Li, Ji Gan, Xinbo Gao*
+                                            <hr class="divider">
+                                            <p> Focusing on the problem of anomaly understanding in UAV aerial video
+                                                scenes, we propose the first reasoning-oriented large-scale UAV anomaly
+                                                understanding benchmark dataset, A2Seek. This dataset contains 23 hours
+                                                of 4K UAV aerial videos, covering 27 typical campus scenes and over 20
+                                                types of anomalies, integrating RGB and infrared modalities, and
+                                                providing frame-level timestamps, region-level annotations, and causal
+                                                reasoning explanations, enabling algorithms to be comprehensively
+                                                evaluated on three levels: "whether there is an anomaly," "where the
+                                                anomaly is," and "why it occurs." On this basis, the team proposed the
+                                                reasoning-driven framework A2Seek-R1, which activates model reasoning
+                                                capabilities through Graph-of-Thought (GoT) supervised fine-tuning, and
+                                                designed the A-GRPO reinforcement learning algorithm for aerial scenes,
+                                                allowing the model to dynamically focus on anomalous regions and output
+                                                interpretable reasoning chains. Experiments show that A2Seek-R1 improves
+                                                prediction accuracy by 22.04% and anomaly localization mIoU by 13.9%
+                                                compared with existing methods, demonstrating strong generalization in
+                                                complex environments and out-of-distribution scenarios.
+                                            </p>
+                                            <span class="fst-italic">Conference on Neural Information Processing
+                                                Systems(NeurIPS),2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--单个论文结束-->
+                                <!--单个论文开始-->
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="col-lg-3 col-sm-3">
+                                            <img src="./paper_img/2025-9-NeurIPS.png" alt="Zoom Image"
+                                                class="zoom-image">
+                                        </div>
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>A2Seek: Towards Reasoning-Centric Benchmark for Aerial Anomaly
+                                                    Understanding</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://arxiv.org/pdf/2505.21962">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
+                                                </a>
+                                            </h5>
+                                            Mengjingcheng Mo1, Xinyang Tong, Mingpi Tan, Jiaxu Leng1,Jiankang Zheng,
+                                            Yiran Liu, Haosheng Chen, Ji Gan1, Weisheng Li, Xinbo Gao*
+                                            <hr class="divider">
+                                            <p> Focusing on the problem of anomaly understanding in UAV aerial video
+                                                scenes, we propose the first reasoning-oriented large-scale UAV anomaly
+                                                understanding benchmark dataset, A2Seek. This dataset contains 23 hours
+                                                of 4K UAV aerial videos, covering 27 typical campus scenes and over 20
+                                                types of anomalies, integrating RGB and infrared modalities, and
+                                                providing frame-level timestamps, region-level annotations, and causal
+                                                reasoning explanations, enabling algorithms to be comprehensively
+                                                evaluated on three levels: "whether there is an anomaly," "where the
+                                                anomaly is," and "why it occurs." On this basis, the team proposed the
+                                                reasoning-driven framework A2Seek-R1, which activates model reasoning
+                                                capabilities through Graph-of-Thought (GoT) supervised fine-tuning, and
+                                                designed the A-GRPO reinforcement learning algorithm for aerial scenes,
+                                                allowing the model to dynamically focus on anomalous regions and output
+                                                interpretable reasoning chains. Experiments show that A2Seek-R1 improves
+                                                prediction accuracy by 22.04% and anomaly localization mIoU by 13.9%
+                                                compared with existing methods, demonstrating strong generalization in
+                                                complex environments and out-of-distribution scenarios.
+                                            </p>
+                                            <span class="fst-italic">Conference on Neural Information Processing
+                                                Systems(NeurIPS),2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--单个论文结束-->
+                                <!--单个论文开始-->
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="col-lg-3 col-sm-3">
+                                            <img src="./paper_img/2025-9-TIP.png" alt="Zoom Image" class="zoom-image">
+                                        </div>
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>Dual-space Normalizing Flow for Unsupervised Video Anomaly
+                                                    Detection</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://ieeexplore.ieee.org/document/11185330"
+                                                    target="_blank">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
+                                                </a>
+                                            </h5>
+                                            Jiaxu Leng, Yumeng Zhang, Mingpi Tan, Changjiang Kuang, Zhanjie Wu, Ji Gan,
+                                            Xinbo Gao*
+                                            <hr class="divider">
+                                            <p> Since existing flow-based methods are limited to Euclidean space and
+                                                struggle to distinguish ambiguous abnormal actions that resemble normal
+                                                ones, this paper proposes a novel unsupervised video anomaly detection
+                                                method based on bi-space normalizing flows. This approach integrates the
+                                                advantages of both Euclidean and hyperbolic geometry, capturing the
+                                                intrinsic hierarchical relationships between actions while extracting
+                                                fine-grained local features of human poses. Additionally, it
+                                                incorporates an adaptive-weighted approximate quality loss that
+                                                dynamically applies stronger constraints to less discriminative regions,
+                                                encouraging the model to focus more on key discriminative features that
+                                                reflect complex inter-action relationships. Extensive experiments on
+                                                public datasets demonstrate the method's effectiveness and robustness
+                                                across various video anomaly detection scenarios.
+                                            </p>
+                                            <span class="fst-italic">IEEE Transactions on Image
+                                                Processing(TIP),2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--单个论文结束-->
                                 <!--单个论文开始1-->
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-start">
@@ -149,22 +321,49 @@
                                             <img src="./paper_img/DSRL_Nips24.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://link.springer.com/article/10.1007/s11263-025-02350-5" target="_blank">
-                                                    <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>Beyond Euclidean: Dual-Space Representation Learning for Weakly
+                                                    Supervised Video Violence Detection</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://link.springer.com/article/10.1007/s11263-025-02350-5"
+                                                    target="_blank">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
                                                 </a>
                                             </h5>
-                                            Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen, and Xinbo Gao*
+                                            Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen, and
+                                            Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                While numerous Video Violence Detection (VVD) methods have focused on representation learning in Euclidean space, they struggle to learn sufficiently discriminative features, leading to weaknesses in recognizing normal events that are visually similar to violent events (i.e., ambiguous violence). In contrast, hyperbolic representation learning, renowned for its ability to model hierarchical and complex relationships between events, has the potential to amplify the discrimination between visually similar events. Inspired by these, we develop a novel Dual-Space Representation Learning (DSRL) method for weakly supervised VVD to utilize the strength of both Euclidean and hyperbolic geometries, capturing the visual features of events while also exploring the intrinsic relations between events, thereby enhancing the discriminative capacity of the features. DSRL employs a novel information aggregation strategy to progressively learn event context in hyperbolic spaces, which selects aggregation nodes through layer-sensitive hyperbolic association degrees constrained by hyperbolic Dirichlet energy. Furthermore, DSRL attempts to break the cyber-balkanization of different spaces, utilizing cross-space attention to facilitate information interactions between Euclidean and hyperbolic space to capture better discriminative features for final violence detection.
+                                                While numerous Video Violence Detection (VVD) methods have focused on
+                                                representation learning in Euclidean space, they struggle to learn
+                                                sufficiently discriminative features, leading to weaknesses in
+                                                recognizing normal events that are visually similar to violent events
+                                                (i.e., ambiguous violence). In contrast, hyperbolic representation
+                                                learning, renowned for its ability to model hierarchical and complex
+                                                relationships between events, has the potential to amplify the
+                                                discrimination between visually similar events. Inspired by these, we
+                                                develop a novel Dual-Space Representation Learning (DSRL) method for
+                                                weakly supervised VVD to utilize the strength of both Euclidean and
+                                                hyperbolic geometries, capturing the visual features of events while
+                                                also exploring the intrinsic relations between events, thereby enhancing
+                                                the discriminative capacity of the features. DSRL employs a novel
+                                                information aggregation strategy to progressively learn event context in
+                                                hyperbolic spaces, which selects aggregation nodes through
+                                                layer-sensitive hyperbolic association degrees constrained by hyperbolic
+                                                Dirichlet energy. Furthermore, DSRL attempts to break the
+                                                cyber-balkanization of different spaces, utilizing cross-space attention
+                                                to facilitate information interactions between Euclidean and hyperbolic
+                                                space to capture better discriminative features for final violence
+                                                detection.
                                             </p>
-                                            <span class="fst-italic">Advances in Neural Information Processing Systems (NeurIPS), 2024</span>
+                                            <span class="fst-italic">Advances in Neural Information Processing Systems
+                                                (NeurIPS), 2024</span>
                                         </div>
                                     </div>
                                 </div>
-                                 <!--单个论文开始1-->
+                                <!--单个论文开始1-->
 
                                 <!--单个论文开始2-->
                                 <div class="col-lg-12">
@@ -173,22 +372,51 @@
                                             <img src="./paper_img/epap-net.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Anomaly Warning: Learning and Memorizing Future Semantic Patterns for Unsupervised Ex-ante Potential Anomaly Prediction</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://dl.acm.org/doi/abs/10.1145/3503161.3548000" target="_blank">
-                                                    <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>Anomaly Warning: Learning and Memorizing Future Semantic Patterns
+                                                    for Unsupervised Ex-ante Potential Anomaly Prediction</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://dl.acm.org/doi/abs/10.1145/3503161.3548000"
+                                                    target="_blank">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
                                                 </a>
                                             </h5>
                                             Jiaxu Leng, Mingpi Tan, Xinbo Gao*, Wen Lu and Zongyi Xu
                                             <hr class="divider">
                                             <p>
-                                                Existing video anomaly detection methods typically utilize reconstruction or prediction error to detect anomalies in the current frame. However, these methods cannot predict ex-ante potential anomalies in future frames, which is imperative in real scenes. Inspired by the ex-ante prediction ability of humans, we propose an unsupervised Ex-ante Potential Anomaly Prediction Network (EPAP-Net), which learns to build a semantic pool to memorize the normal semantic patterns of future frames for indirect anomaly prediction. At the training time, the memorized patterns are encouraged to be discriminated through our Semantic Pool Building Module (SPBM) with the novel padding and updating strategies. Moreover, we present a novel Semantic Similarity Loss (SSLoss) at the feature level to maximize the semantic consistency of memorized items and corresponding future frames. Specially, to enhance the value of our work, we design a Multiple Frames Prediction module (MFP) to achieve anomaly prediction in future multiple frames. At the test time, we utilize the trained semantic pool instead of ground truth to evaluate the anomalies of future frames. Besides, to obtain better feature representations for our task, we introduce a novel Channel-selected Shift Encoder (CSE), which shifts channels along the temporal dimension between the input frames to capture motion information without generating redundant features. Experimental results demonstrate that the proposed EPAP-Net can effectively predict the potential anomalies in future frames and exhibit superior or competitive performance on video anomaly detection. 
+                                                Existing video anomaly detection methods typically utilize
+                                                reconstruction or prediction error to detect anomalies in the current
+                                                frame. However, these methods cannot predict ex-ante potential anomalies
+                                                in future frames, which is imperative in real scenes. Inspired by the
+                                                ex-ante prediction ability of humans, we propose an unsupervised Ex-ante
+                                                Potential Anomaly Prediction Network (EPAP-Net), which learns to build a
+                                                semantic pool to memorize the normal semantic patterns of future frames
+                                                for indirect anomaly prediction. At the training time, the memorized
+                                                patterns are encouraged to be discriminated through our Semantic Pool
+                                                Building Module (SPBM) with the novel padding and updating strategies.
+                                                Moreover, we present a novel Semantic Similarity Loss (SSLoss) at the
+                                                feature level to maximize the semantic consistency of memorized items
+                                                and corresponding future frames. Specially, to enhance the value of our
+                                                work, we design a Multiple Frames Prediction module (MFP) to achieve
+                                                anomaly prediction in future multiple frames. At the test time, we
+                                                utilize the trained semantic pool instead of ground truth to evaluate
+                                                the anomalies of future frames. Besides, to obtain better feature
+                                                representations for our task, we introduce a novel Channel-selected
+                                                Shift Encoder (CSE), which shifts channels along the temporal dimension
+                                                between the input frames to capture motion information without
+                                                generating redundant features. Experimental results demonstrate that the
+                                                proposed EPAP-Net can effectively predict the potential anomalies in
+                                                future frames and exhibit superior or competitive performance on video
+                                                anomaly detection.
                                             </p>
-                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM MM), 2022</span>
+                                            <span class="fst-italic">ACM International Conference on Multimedia (ACM
+                                                MM), 2022</span>
                                         </div>
                                     </div>
                                 </div>
-                                 <!--单个论文开始2-->
+                                <!--单个论文开始2-->
 
 
                                 <!--单个论文开始3-->
@@ -198,22 +426,42 @@
                                             <img src="./paper_img/mfvd_icme24.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Modality-Free Violence Detection via Cross-Modal Causal Attention and Feature Distillation</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/document/10688031" target="_blank">
-                                                    <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>Modality-Free Violence Detection via Cross-Modal Causal Attention
+                                                    and Feature Distillation</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://ieeexplore.ieee.org/document/10688031"
+                                                    target="_blank">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
                                                 </a>
                                             </h5>
                                             Jiaxu Leng, Zhanjie Wu, Mengjingcheng Mo, Mingpi Tan, Shuang Li, Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                In this paper, we propose a novel framework, Modality-Free Violence Detection (MFVD), which captures the causal relationships among multimodal cues and ensures stable performance even in the absence of audio information. Specifically, we design a novel Cross-Modal Causal Attention mechanism (CCA) to deal with modality asynchrony by utilizing relative temporal distance and semantic correlation to obtain causal attention between audio and visual information instead of merely calculating correlation scores between audio and visual features. Moreover, to ensure our framework can work well when the audio modality is missing, we design a Cross-Modal Feature Distillation module (CFD), leveraging the common parts of the fused features obtained from CCA to guide the enhancement of visual features. Experimental results on the XD-Violence dataset demonstrate the superior performance of the proposed method in both vision-only and audio-visual modalities, surpassing state-of-the-art methods for both tasks.
+                                                In this paper, we propose a novel framework, Modality-Free Violence
+                                                Detection (MFVD), which captures the causal relationships among
+                                                multimodal cues and ensures stable performance even in the absence of
+                                                audio information. Specifically, we design a novel Cross-Modal Causal
+                                                Attention mechanism (CCA) to deal with modality asynchrony by utilizing
+                                                relative temporal distance and semantic correlation to obtain causal
+                                                attention between audio and visual information instead of merely
+                                                calculating correlation scores between audio and visual features.
+                                                Moreover, to ensure our framework can work well when the audio modality
+                                                is missing, we design a Cross-Modal Feature Distillation module (CFD),
+                                                leveraging the common parts of the fused features obtained from CCA to
+                                                guide the enhancement of visual features. Experimental results on the
+                                                XD-Violence dataset demonstrate the superior performance of the proposed
+                                                method in both vision-only and audio-visual modalities, surpassing
+                                                state-of-the-art methods for both tasks.
                                             </p>
-                                            <span class="fst-italic">IEEE International Conference on Multimedia and Expo (ICME), 2024</span>
+                                            <span class="fst-italic">IEEE International Conference on Multimedia and
+                                                Expo (ICME), 2024</span>
                                         </div>
                                     </div>
                                 </div>
-                                 <!--单个论文开始3-->
+                                <!--单个论文开始3-->
 
                                 <!--单个论文开始4-->
                                 <div class="col-lg-12">
@@ -222,22 +470,42 @@
                                             <img src="./paper_img/dsel_icme24.png" alt="Zoom Image" class="zoom-image">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: -15px;">
-                                                <span>Dual Space Embedding Learning For Weakly Supervised Audio-Visual Violence Detection</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/document/10687755" target="_blank">
-                                                    <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                            <h5 class="d-flex justify-content-between pb-2"
+                                                style="margin-bottom: -15px;">
+                                                <span>Dual Space Embedding Learning For Weakly Supervised Audio-Visual
+                                                    Violence Detection</span>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://ieeexplore.ieee.org/document/10687755"
+                                                    target="_blank">
+                                                    <img src="img/paper_link.png" alt="Paper Link" width="20"
+                                                        height="20">
                                                 </a>
                                             </h5>
                                             Yiran Liu, Zhanjie Wu, Mengjingcheng Mo, Ji Gan, Jiaxu Leng*, Xinbo Gao*
                                             <hr class="divider">
                                             <p>
-                                                In this paper, we propose Dual Space Embedding Learning (DSEL) for weakly supervised audio-visual violence detection, which excavates violence information deeply in both Euclidean and Hyperbolic spaces to distinguish violence from non-violence semantically and alleviate the asynchronous issue of violent cues in audio-visual patterns. Specifically, we first design a dual space visual feature interaction module (DSVFI) to deeply investigate the violence information in visual modality, which contains richer information compared to audio counterpart. Then, considering the modality asynchrony between the two modalities, we employ a late modality fusion method and design an asynchrony-aware audio-visual fusion module (AAF), in which visual features receive the violent prompt from the audio features after interacting among snippets and learning the violence information from each other. Experimental results show that our method achieves state-of-the-art performance on XD-Violence. 
+                                                In this paper, we propose Dual Space Embedding Learning (DSEL) for
+                                                weakly supervised audio-visual violence detection, which excavates
+                                                violence information deeply in both Euclidean and Hyperbolic spaces to
+                                                distinguish violence from non-violence semantically and alleviate the
+                                                asynchronous issue of violent cues in audio-visual patterns.
+                                                Specifically, we first design a dual space visual feature interaction
+                                                module (DSVFI) to deeply investigate the violence information in visual
+                                                modality, which contains richer information compared to audio
+                                                counterpart. Then, considering the modality asynchrony between the two
+                                                modalities, we employ a late modality fusion method and design an
+                                                asynchrony-aware audio-visual fusion module (AAF), in which visual
+                                                features receive the violent prompt from the audio features after
+                                                interacting among snippets and learning the violence information from
+                                                each other. Experimental results show that our method achieves
+                                                state-of-the-art performance on XD-Violence.
                                             </p>
-                                            <span class="fst-italic">IEEE International Conference on Multimedia and Expo (ICME), 2023</span>
+                                            <span class="fst-italic">IEEE International Conference on Multimedia and
+                                                Expo (ICME), 2023</span>
                                         </div>
                                     </div>
                                 </div>
-                                 <!--单个论文开始4-->
+                                <!--单个论文开始4-->
                             </div>
                         </div>
 
@@ -246,28 +514,34 @@
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-center">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/bg-hero_van.jpg" alt=""">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/bg-hero_van.jpg"
+                                                alt=""">
                                         </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <div class=" w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="" target="_blank"><i class="fab fa-github"></i></a>
+                                                <a class="btn btn-square btn-primary mx-1" href="" target="_blank"><i
+                                                        class="fab fa-github"></i></a>
                                             </h5>
-                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
+                                                diam</small>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-center">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/bg-hero_van.jpg" alt=""">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/bg-hero_van.jpg"
+                                                alt=""">
                                         </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <div class=" w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="" target="_blank"><i class="fab fa-github"></i></a>
+                                                <a class="btn btn-square btn-primary mx-1" href="" target="_blank"><i
+                                                        class="fab fa-github"></i></a>
                                             </h5>
-                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
+                                                diam</small>
                                         </div>
                                     </div>
                                 </div>
@@ -278,37 +552,43 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/applet.png" alt="" style="width: 120px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/applet.png" alt=""
+                                            style="width: 120px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Weixin Applet</span>
                                                 <span class="text-primary"><i class="fab fa-weixin"></i></span>
                                             </h5>
-                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
+                                                diam</small>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/bird.jpg" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/bird.jpg" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
                                                 <span class="text-primary">$115</span>
                                             </h5>
-                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
+                                                diam</small>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/bird.jpg" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/bird.jpg" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
                                                 <span class="text-primary">$115</span>
                                             </h5>
-                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
+                                                diam</small>
                                         </div>
                                     </div>
                                 </div>
@@ -322,30 +602,40 @@
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-center">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/iip_black_h.png" alt=""">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/iip_black_h.png"
+                                                alt=""">
                                         </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <div class=" w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>IIP Logos</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://github.com/OpenTVI/OpenTVI.github.io" target="_blank"><i class="fab fa-github"></i></a>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://github.com/OpenTVI/OpenTVI.github.io"
+                                                    target="_blank"><i class="fab fa-github"></i></a>
                                             </h5>
-                                            <small class="fst-italic">Different versions of our logos, for uses under different scenarios.  </small>
-                                            <a class="btn btn-square btn-primary mx-1" href="resources/iip-logo.zip"><i class="fa fa-download"></i></a>
+                                            <small class="fst-italic">Different versions of our logos, for uses under
+                                                different scenarios. </small>
+                                            <a class="btn btn-square btn-primary mx-1" href="resources/iip-logo.zip"><i
+                                                    class="fa fa-download"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="d-flex align-items-center">
                                         <div class="col-lg-3 col-sm-3">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/xdu_red_black.png" alt="">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/xdu_red_black.png"
+                                                alt="">
                                         </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>XDU Logos</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://github.com/note286/xdulogo" target="_blank"><i class="fab fa-github"></i></a>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://github.com/note286/xdulogo" target="_blank"><i
+                                                        class="fab fa-github"></i></a>
                                             </h5>
-                                            <small class="fst-italic">Different versions of XDU logos, for uses under different scenarios.  </small>
-                                            <a class="btn btn-square btn-primary mx-1" href="resources/xdu-logo.zip"><i class="fa fa-download"></i></a>
+                                            <small class="fst-italic">Different versions of XDU logos, for uses under
+                                                different scenarios. </small>
+                                            <a class="btn btn-square btn-primary mx-1" href="resources/xdu-logo.zip"><i
+                                                    class="fa fa-download"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -357,10 +647,15 @@
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Templetes</span>
-                                                <a class="btn btn-square btn-primary mx-1" href="https://github.com/iip-xdu/iip-template" target="_blank"><i class="fab fa-github"></i></a>
+                                                <a class="btn btn-square btn-primary mx-1"
+                                                    href="https://github.com/iip-xdu/iip-template" target="_blank"><i
+                                                        class="fab fa-github"></i></a>
                                             </h5>
-                                            <small class="fst-italic"> Slides templates (16:9 PPT) with our logos.</small>
-                                            <a class="btn btn-square btn-primary mx-1" href="https://github.com/iip-xdu/iip-template" target="_blank"><i class="fa fa-download"></i></a>
+                                            <small class="fst-italic"> Slides templates (16:9 PPT) with our
+                                                logos.</small>
+                                            <a class="btn btn-square btn-primary mx-1"
+                                                href="https://github.com/iip-xdu/iip-template" target="_blank"><i
+                                                    class="fa fa-download"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -376,7 +671,7 @@
 
 
         <!-- Footer Start -->
-<!--         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!--         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -435,7 +730,7 @@
                 </div>
             </div>
         </div> -->
-                <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
@@ -456,12 +751,16 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 2 Chongwen Road, Nan'an District, Chongqing, </p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 2 Chongwen Road, Nan'an District,
+                            Chongqing, </p>
                         <p class="mb-2"><i class="fa fa-globe me-3"></i>CQUPT, ChongQing 10617, China</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>lengjx <i class="fa fa-at"></i> cqupt.edu.cn</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>lengjx <i class="fa fa-at"></i> cqupt.edu.cn
+                        </p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-weixin"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/OpenTVI/OpenTVI.github.io" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://github.com/OpenTVI/OpenTVI.github.io" target="_blank"><i
+                                    class="fab fa-github"></i></a>
                             <!--
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -471,8 +770,10 @@
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Links</h4>
                         <a class="btn btn-link" href="https://www.cqupt.edu.cn/" target="_blank">CQUPT</a>
-                        <a class="btn btn-link" href="https://see.xidian.edu.cn/faculty/xbgao/" target="_blank">VIPSL (Xinbo Gao) </a>
-                        <a class="btn btn-link" href="https://www.researchgate.net/profile/Jiaxu-Leng-2" target="_blank">Home (Jiaxu Leng) </a>
+                        <a class="btn btn-link" href="https://see.xidian.edu.cn/faculty/xbgao/" target="_blank">VIPSL
+                            (Xinbo Gao) </a>
+                        <a class="btn btn-link" href="https://www.researchgate.net/profile/Jiaxu-Leng-2"
+                            target="_blank">Home (Jiaxu Leng) </a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Pages</h4>
@@ -498,8 +799,8 @@
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">TVI Group.</a>, All Right Reserved.
 
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
@@ -537,4 +838,3 @@
 </body>
 
 </html>
-
