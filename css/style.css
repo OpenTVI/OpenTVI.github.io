@@ -2026,7 +2026,7 @@
     position: relative;
     flex: 1 1 500px; 
     background: var(--video-bg);
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
