@@ -2,7 +2,7 @@
 :root {
     --primary: #FEA116;
     --light: #F1F8FF;
-    --dark: #2e75b6;
+    --dark: #091a29;
 
     --bg: #0f172b;
     --card-bg: #ffffff;
@@ -33,7 +33,20 @@
     bottom: 45px;
     z-index: 99;
 }
+/* style.css */
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* 防止因为 100% 宽度加 padding 导致的横向滚动条 */
+}
+
+/* 确保 Hero 区域本身也是全宽 */
+.hero-header {
+    width: 100%;
+    /* max-width: 100%;  <-- 确保没有这行限制宽度的代码 */
+}
 
 /*** Spinner ***/
 #spinner {
@@ -660,7 +673,7 @@
 /* --- layout --- */
 .news-section {
   padding: 28px 20px;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: #0f1724;
@@ -2016,7 +2029,7 @@
     border-radius: 20px;
     box-shadow: var(--card-shadow);
     overflow: hidden;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     flex-wrap: wrap; 
 }
@@ -2255,3 +2268,106 @@
         text-transform: uppercase;
         letter-spacing: 1px;
     }
+/* --- Hero Section Background --- */
+.hero-header {
+    /* 渐变背景 */
+    background: radial-gradient(circle at center top, #0f2044, #02050a) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 点阵背景 */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#3b82f6 1px, transparent 1px); 
+    background-size: 40px 40px; 
+    opacity: 0.15; 
+    pointer-events: none;
+}
+
+
+.text-gradient {
+    /* 文字渐变 */
+    background: linear-gradient(to right, #60a5fa, #2dd4bf);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.spacing-wide {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+}
+
+/* 按钮 */
+.btn-primary-glow {
+    font-size: 18px;
+    background-color: #2e75b6; 
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5); 
+}
+
+.btn-primary-glow:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.7);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-outline-light {
+    font-size: 18px;
+    border-width: 1px;
+    color: rgba(255,255,255,0.8);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    border-color: white;
+}
+
+/* --- Stats Bar (底部数据栏) --- */
+
+.navbar {
+    transition: background 0.3s ease-in-out;
+}
+.navbar.scrolled {
+    background: #091b2c(2, 5, 10, 0.9) !important; /* 滚动后变深色背景 */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* --- Simple Animation --- */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+.Welcome{
+    font-size: 100px;
+}
+.Subtitle{
+    font-size: 30px;
+}
+.intro-left{
+    margin-right: 10px;
+}

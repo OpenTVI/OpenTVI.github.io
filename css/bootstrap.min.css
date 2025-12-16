@@ -381,7 +381,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    -webkit-appearance: button
+    appearance: button
 }
 
 button:not(:disabled),
@@ -442,7 +442,7 @@ legend+* {
 
 [type="search"] {
     outline-offset: -2px;
-    -webkit-appearance: textfield
+    appearance: textfield
 }
 
 ::-webkit-search-decoration {
@@ -691,7 +691,7 @@ progress {
     .container-lg,
     .container-xl,
     .container-xxl {
-        max-width: 1320px
+        max-width: 1800px
     }
 }
 
@@ -2498,11 +2498,15 @@ textarea.form-control-lg {
     background-size: contain;
     border: 1px solid rgba(0, 0, 0, 0.25);
     appearance: none;
-    color-adjust: exact
+    /* color-adjust: exact */
 }
 
 .form-check-input[type="checkbox"] {
-    border-radius: .25em
+    border-radius: .25em;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    -ms-border-radius: .25em;
+    -o-border-radius: .25em;
 }
 
 .form-check-input[type="radio"] {
@@ -8377,7 +8381,7 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-    background-color: #2e75b6 !important
+    background-color: #091a29 !important
 }
 
 .bg-body {
