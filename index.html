@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-fluid bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -46,121 +46,82 @@
         <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>IIP-XDU</h1> -->
-                    <!-- <img src="img/iip_white2.png" alt="Logo"> -->
-                    <img src="img/logo.png" alt="Logo">
+        <!-- header start -->
+        <div class="container-fluid position-relative p-0">
+
+            <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-3 fixed-top" id="mainNav">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/logo.png" alt="Logo" style="height: 200px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="team.html" class="nav-item nav-link">Team</a>
-                        <a href="research.html" class="nav-item nav-link">Research</a>
-                        <!-- <a href="resources.html" class="nav-item nav-link ">Resources</a> -->
-                        <a href="contact.html" class="nav-item nav-link">contact us</a>
-                        <!--
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">XAI</a>
-                                <a href="team.html" class="dropdown-item">AIGC</a>
-                                <a href="testimonial.html" class="dropdown-item">HIT</a>
-                            </div>
-                        </div>
-                      -->
-
+                        <a href="index.html" class="nav-item nav-link active fs-5">Home</a>
+                        <a href="team2.html" class="nav-item nav-link fs-5">Team</a>
+                        <a href="research.html" class="nav-item nav-link fs-5">Research</a>
+                        <a href="contact.html" class="nav-item nav-link fs-5">Contact Us</a>
                     </div>
-                    <!-- <a href="" class="nav-item nav-link"><i class="fa fa-2x fa-language text-primary "></i></a> -->
                 </div>
             </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5 parallax hero-header">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Welcome to TVI Group</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="http://www.cqupt.edu.cn/" target="_blank">CQUPT</a>
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-            <!--
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container-fluid hero-header bg-dark py-5 mb-5">
+                <div class="hero-bg-overlay"></div>
 
-                <div class="container my-5 py-5">
-                    <div class="row align-items-center g-5">
-                        <div class="col-lg-8 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft"> About Us </h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2"> 2 papers accepted by CVPR'23</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">XAI, AIGC</a>
-                        </div>
-                        <div class="col-lg-4 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="img/hero.png" alt="">
-                        </div>
+                <div class="container text-center my-5 pt-5 pb-4 position-relative" style="z-index: 2;">
+
+                    <div class="d-inline-block border border-secondary rounded-pill px-3 py-1 mb-4 fade-in-up"
+                        style="background: rgba(255,255,255,0.05);">
+                        <a href="http://www.cqupt.edu.cn/"><small
+                                class="text-uppercase text-light spacing-wide">Chongqing University of Posts and
+                                Telecommunications</small></a>
+                    </div>
+
+                    <h1 class="display-3 text-white mb-3 animated slideInDown fw-bold Welcome">
+                        Welcome to <span class="text-gradient">TVI Group</span>
+                    </h1>
+
+                    <p class="fs-5 text-white-50 mb-5 mx-auto fade-in-up" style="max-width: 800px;">
+                        We are the Trustworthy Visual Intelligence Group. We focus on pushing the boundaries of Computer
+                        Vision, Embodied Intelligence, and Reliable AI.
+                    </p>
+
+                    <div class="d-flex justify-content-center gap-3 mb-5 fade-in-up">
+                        <a href="research.html" class="btn btn-primary-glow py-3 px-5 rounded-pill">Explore Our Work</a>
+                        <a href="contact.html" class="btn btn-outline-light py-3 px-5 rounded-pill">Contact Us</a>
                     </div>
                 </div>
-            </div>
-          -->
-        </div>
-        <!-- Navbar & Hero End -->
 
-<!--         <div class="text-center">
-            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Introduction</h5>
-            <h1 class="mb-5">About us</h1>
-        </div> -->
-        <!-- About Start -->
-        <div class="container-xxl py-5 ">
+
+            </div>
+        </div>
+
+        <!--Team Introduction Start  -->
+        <div class="container-fluid py-5 ">
             <div class="container">
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="row g-3">
-                            <div class="col-4 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
-                                    src="img/行人分析.png">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/视频异常.png"
-                                    style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/自动驾驶.png">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/机械臂.png">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-8">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                        <h2 class="mb-4">Trustworthy Visual Intelligence (TVI) Group</h2>
-                        <p class="mb-4">The Trustworthy Visual Intelligence (TVI) group is part of the Image Cognition
-                            Group at Chongqing University of Posts and Telecommunications, a key laboratory in
-                            Chongqing. Founded in 2020, the team is a young and dynamic research group led by Associate
-                            Professor
-                            <a href="https://faculty.cqupt.edu.cn/lengjiaxu/zh_CN/index.htm"> Jiaxu Leng </a>, The group
-                            currently consists of 34 research members, focusing on Trustworthy AI, such as Video Anomaly
-                            Detection, Video Analysis, Embodied Intelligence, and Autonomous Driving.
-                        </p>
-                        <p class="mb-4"> The group members have led or participated in several research projects,
-                            including the National Natural Science Foundation of China,
-                            the National Natural Science Foundation of China Youth Project, and the Chongqing Bo Xin
-                            Plan. They have published numerous academic papers in top international journals and
-                            conferences,
-                            such as NeurIPS, ACM CSUR, MM, IEEE TIFS, TMM, TITS, TCSVT, TGRS, etc.
-                        </p>
-                        <div class="row g-4 mb-4">
+                    <!-- left -->
+<div class="col-lg-5">
+    <div class="row g-3"> <div class="col-6">
+            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" 
+                 src="img2/index-VIA.png">
+        </div>
 
-                        </div>
+        <div class="col-6">
+            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" 
+                 src="img2/index-VAD.png" 
+                 style="margin-top: 30%;"> </div>
 
-                    </div> -->
-                    <div class="col-lg-8">
+        <div class="col-8 offset-2">
+            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.5s" 
+                 src="img2/index-EI.png"
+                 style="margin-top: -5%;"> </div>
+
+    </div>
+</div>
+                    <!-- right -->
+                    <div class="col-lg-7">
                         <div class="about-card">
                             <h5 class="mb-4 section-title-custom">Trustworthy Visual Intelligence Group</h5>
 
@@ -219,18 +180,12 @@
                 </div>
             </div>
         </div>
-        <!-- About End -->
 
 
-        <!-- Vision · Mission · Values END -->
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+
+        <!-- Latest News Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
-<!--                 <div class="text-center">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Developments</h5>
-                    <h1 class="mb-5">Latest progress</h1>
-                </div> -->
-                <!-- Representative News start-->
                 <section class="news-section" aria-label="Recent News">
                     <div class="news-header">
                         <div>
@@ -241,8 +196,27 @@
                     </div>
 
                     <section class="news-section" aria-label="Recent research news">
-
                         <div class="news-grid">
+
+                            <!-- news -->
+                            <article class="news-card" tabindex="0" role="article" data-link="">
+                                <div class="news-media">
+                                    <img src="img/2025-12.webp" alt="Paper 1 illustration" />
+                                    <time class="news-date" datetime="2025-9">2025.9</time>
+                                </div>
+                                <div class="news-body">
+                                    <h3 class="news-title">The team 'Sharp Eyes and Quick Hands' won the championship at
+                                        the 2025 Wuxi International Artificial Intelligence Innovation Application
+                                        Competition. </h3>
+                                    <p class="news-excerpt">On December 12, 2025, the award ceremony for the 3rd Wuxi
+                                        International Artificial Intelligence Innovation Application Competition was
+                                        grandly held at the InterContinental Wuxi, and the team won first place.</p>
+                                    <a class="news-cta" href="https://mp.weixin.qq.com/s/groRbY6m8TnxmHh5Nu8ZZA"
+                                        target="_blank" rel="noopener">Read more →</a>
+                                </div>
+                            </article>
+
+                            <!-- news-->
                             <article class="news-card" tabindex="0" role="article" data-link="">
                                 <div class="news-media">
                                     <img src="img/2025-11.png" alt="Paper 1 illustration" />
@@ -260,6 +234,7 @@
                                 </div>
                             </article>
 
+                            <!-- news -->
                             <article class="news-card" tabindex="0" role="article" data-link="">
                                 <div class="news-media">
                                     <img src="img/202509.webp" alt="Paper 1 illustration" />
@@ -274,28 +249,12 @@
                                         target="_blank" rel="noopener">Read more →</a>
                                 </div>
                             </article>
-
-                            <article class="news-card" tabindex="0" role="article" data-link="">
-                                <div class="news-media">
-                                    <img src="img/2025-9.webp" alt="Paper 1 illustration" />
-                                    <time class="news-date" datetime="2025-9">2025.9</time>
-                                </div>
-                                <div class="news-body">
-                                    <h3 class="news-title">A study on abnormal understanding of drone aerial videos has
-                                        been accepted by NeurIPS. </h3>
-                                    <p class="news-excerpt">This paper focuses on the problem of anomaly understanding
-                                        in UAV aerial video scenes and proposes the first large-scale benchmark dataset
-                                        for reasoning-based UAV anomaly understanding, A2Seek.</p>
-                                    <a class="news-cta" href="https://mp.weixin.qq.com/s/m4c0h974c4ZARyisn4LYmw"
-                                        target="_blank" rel="noopener">Read more →</a>
-                                </div>
-                            </article>
-
-
-
                         </div>
                     </section>
-                    <br><br>  <br><br>
+                    <br><br> <br><br>
+
+
+                    <!-- Garden start -->
                     <div class="news-header">
                         <div>
                             <h2>We proposed 'GARDEN'</h2>
@@ -336,249 +295,65 @@
                             </div>
                         </div>
                     </div>
-                    <!--... add more cards as needed -->
+
             </div>
             </section>
-            <!-- Representative News over -->
-
-
-        </div>
-
-        <!-- all achievements start -->
-
-<!--         <div class="text-center">
-            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Research Achievements</h5>
-            <h1 class="mb-5">🏆Research Achievements🏆</h1>
-        </div> -->
-  
-        <div class="owl-carousel testimonial-carousel" style="margin-top: 40px;">
-            
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>2 papers are accepted by AAAI!</p>
-                <p>DSC：Dynamic-Static Collaboration for Unsupervised Domain Adaptive Video-Based Visible-Infrared Person
-                    Re-Identificaion.PortraitSR: Artist-Inspired Prior Learning for Progressive Face Super-Resolution.
-                </p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">AAAI</h5>
-                        <small>2025-11</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 paper is accepted by TIP!</p>
-                <p>DSC：Dynamic-Static Collaboration for Unsupervised Domain Adaptive Video-Based Visible-Infrared Person
-                    Re-Identification.Dual-space Normalizing Flow for Unsupervised Video Anomaly Detection.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">TIP</h5>
-                        <small>2025-9</small>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 paper is accepted by NeurIPS!</p>
-                <p>Mengjingcheng Mo, Xinyang Tong, Jiaxu Leng, Mingpi Tan, Jiankang Zheng, Yiran Liu, Haosheng Chen, Ji
-                    Gan, Weisheng Li, Xinbo Gao.A2Seek: Towards Reasoning-Centric Benchmark for Aerial Anomaly
-                    Understanding.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">NeurIPS</h5>
-                        <small>2025-9</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 paper is accepted by TPAMI (CCF-A)!</p>
-                <p>Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Mengjingcheng Mo, Jiankang Zheng, Qingqing Li, Ji Gan, Xinbo
-                    Gao.PiercingEye: Dual-Space Video Violence Detection with Hyperbolic Vision-Language Guidance.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">TPAMI</h5>
-                        <small>2025-9</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 study on pedestrian re-identification has been accepted by IEEE TIFS</p>
-                <p>Shuang Li, Jiaxu Leng, Changjiang Kuang, Mingpi Tan, Xinbo Gao.Video-Level Language-Driven
-                    Video-Based Visible-Infrared Person Re-Identification.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">IEEE TIFS</h5>
-                        <small>2025-5</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 study on small-sample object detection has been accepted by the SCI Q2 top journal Neural Networks!
-                </p>
-                <p>Jiaxu Leng, Qianru Chen, Taiyue Chen, Feng Gao,Ji Gan,Changjun Gu,Xinbo Gao.GCapNet-FSD: A
-                    Heterogeneous Graph Capsule Network for Few-Shot Object Detection.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Neural Networks</h5>
-                        <small>2025-5</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 study on pedestrian re-identification has been accepted by the SCI Q1 top journal Pattern
-                    Recognition!</p>
-                <p>Shuang Li, Jiaxu Leng, Ji Gan, Mengjingcheng Mo, Xinbo Gao. Shape-centered Representation Learning
-                    for Visible-Infrared Person Re-Identification.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Pattern Recognition</h5>
-                        <small>2025-4</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 paper is accepted by IJCV (CCF-A)!</p>
-                <p>Jiaxu Leng, Changjiang Kuang, Shuang Li, Ji Gan, Haosheng Chen and Xinbo Gao*. Dual-Space Video
-                    Person Re-Identification[J]. International Journal of Computer Vision, 2025.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">IJCV</h5>
-                        <small>2025-1</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 paper is accepted by NeurIPS (CCF-A)!</p>
-                <p>Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen, and Xinbo Gao*. Beyond
-                    Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">NeurIPS</h5>
-                        <small></small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>1 paper is accepted by IEEE TNNLS (SCI Q1 TOP)!</p>
-                <p>Jiaxu Leng, Jia Wang, Mengjingcheng Mo, Ji, Gan, Wen Lu, and Xinbo Gao*. Difficulty-Guided Variant
-                    Degradation Learning for Blind Image Super-Resolution.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">TNNLS</h5>
-                        <small></small>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>A review paper has been accepted by the SCI Q1 TOP journal ACM Computing Surveys!</p>
-                <p>Jiaxu Leng, Yongming Ye, Mengjingcheng Mo, Chenqiang Gao, Ji Gan, Bin Xiao, and Xinbo Gao*. Recent
-                    Advances for Aerial Object Detection: A Survey[J]. </p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/bird.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">ACM Computing Surveys</h5>
-                        <small></small>
-                    </div>
-                </div>
-            </div>
+            <!-- Garden end -->
 
         </div>
-    </div>
-    </div>
-    <!-- all achievements end -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Laboratory</h4>
 
-                    <a class="btn btn-link" href="index.html" class="nav-item nav-link">About Us</a>
-                    <a class="btn btn-link" href="team.html" class="nav-item nav-link">Team Members</a>
-                    <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research Topics</a>
-                    <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
-                    <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact Us</a>
-                    <!--
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Laboratory</h4>
+
+                        <a class="btn btn-link" href="index.html" class="nav-item nav-link">About Us</a>
+                        <a class="btn btn-link" href="team2.html" class="nav-item nav-link">Team Members</a>
+                        <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research Topics</a>
+                        <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
+                        <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        <!--
                         <a class="btn btn-link" href="">Reservation</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                         <img class="flex-shrink-0 img-fluid rounded" src="img/iip_white2.png" alt="" style="width: 200px;">
                       -->
 
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 2 Chongwen Road, Nan'an District,
-                        Chongqing, </p>
-                    <p class="mb-2"><i class="fa fa-globe me-3"></i>CQUPT, ChongQing 10617, China</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>lengjx <i class="fa fa-at"></i> cqupt.edu.cn</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-weixin"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://github.com/OpenTVI/OpenTVI.github.io"
-                            target="_blank"><i class="fab fa-github"></i></a>
-                        <!--
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 2 Chongwen Road, Nan'an District,
+                            Chongqing, </p>
+                        <p class="mb-2"><i class="fa fa-globe me-3"></i>CQUPT, ChongQing 10617, China</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>lengjx <i class="fa fa-at"></i> cqupt.edu.cn
+                        </p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-weixin"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://github.com/OpenTVI/OpenTVI.github.io" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <!--
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                           -->
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Links</h4>
-                    <a class="btn btn-link" href="https://www.cqupt.edu.cn/" target="_blank">CQUPT</a>
-                    <a class="btn btn-link" href="https://see.xidian.edu.cn/faculty/xbgao/" target="_blank">VIPSL (Xinbo
-                        Gao) </a>
-                    <a class="btn btn-link" href="https://www.researchgate.net/profile/Jiaxu-Leng-2"
-                        target="_blank">Home (Jiaxu Leng) </a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Pages</h4>
-                    <!--
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Links</h4>
+                        <a class="btn btn-link" href="https://www.cqupt.edu.cn/" target="_blank">CQUPT</a>
+                        <a class="btn btn-link" href="https://see.xidian.edu.cn/faculty/xbgao/" target="_blank">VIPSL
+                            (Xinbo
+                            Gao) </a>
+                        <a class="btn btn-link" href="https://www.researchgate.net/profile/Jiaxu-Leng-2"
+                            target="_blank">Home (Jiaxu Leng) </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Pages</h4>
+                        <!--
                         <p>You can try our work.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
@@ -586,40 +361,40 @@
                         </div>
                         <img class="img-fluid flex-shrink-0 rounded-circle" src="img/applet.png" style="width: 50px; height: 50px;">
                       -->
-                    <a class="btn btn-link" href="index.html" class="nav-item nav-link">Home</a>
-                    <a class="btn btn-link" href="team.html" class="nav-item nav-link">Team</a>
-                    <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research</a>
-                    <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
-                    <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a class="btn btn-link" href="index.html" class="nav-item nav-link">Home</a>
+                        <a class="btn btn-link" href="team2.html" class="nav-item nav-link">Team</a>
+                        <a class="btn btn-link" href="research.html" class="nav-item nav-link">Research</a>
+                        <a class="btn btn-link" href="resources.html" class="nav-item nav-link">Resources</a>
+                        <a class="btn btn-link" href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">TVI Group.</a>, All Right Reserved.
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">TVI Group.</a>, All Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
