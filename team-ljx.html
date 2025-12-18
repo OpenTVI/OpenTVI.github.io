@@ -79,7 +79,7 @@
                 </div>
             </nav>
 
-            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+            <!--             <div class="container-fluid py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Jiaxu Leng</h1>
                     <nav aria-label="breadcrumb">
@@ -90,6 +90,29 @@
                         </ol>
                     </nav>
                 </div>
+            </div> -->
+
+            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+
+                <div class="hero-bg-overlay">
+                    <img src="img/bg.png" alt="School Background" class="custom-school-bg">
+                </div>
+
+                <div class="container text-center my-5 pt-5 pb-4 position-relative" style="z-index: 2;">
+
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Jiaxu Leng</h1>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="team2.html">Team</a></li>
+                            </li>
+                        </ol>
+                    </nav>
+
+                </div>
+
             </div>
         </div>
         <!-- Navbar & Hero End -->
@@ -100,25 +123,29 @@
             <div class="container">
                 <div class="row g-4">
 
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item-stu text-center rounded overflow-hidden"
-                            style="height: calc(110% - 30px);">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/ljx.jpg" alt="">
+                    <div class="prof-left-col">
+                        <div class="prof-card">
+                            <div class="prof-img-box">
+                                <img src="img/ljx.jpg" alt="Professor Portrait">
+                                <div class="img-overlay"></div>
                             </div>
-                            <h5 class="mb-0">Jiaxu Leng</h5>
-                            <small>CQUPT Wenfeng Young Scholars "Hundred Talents" Program</small>
-                            <p class="mb-2"><small> lengjx <i class="fa fa-at"></i> cqupt.edu.cn </small> </p>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="team-ljx.html" target="_blank"><i
-                                        class="fa fa-user"></i></a>
-                                <a class="btn btn-square btn-primary mx-1"
-                                    href="https://faculty.cqupt.edu.cn/lengjiaxu/zh_CN/index.htm" target="_blank"><i
-                                        class="fa fa-link"></i></a>
-                                <a class="btn btn-square btn-primary mx-1"
-                                    href="https://scholar.google.com/citations?user=KpX-CCcAAAAJ&hl=zh-CN&oi=ao"
-                                    target="_blank"><i class="fab fa-google"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-github"></i></a>
+
+                            <div class="prof-card-content">
+                                <div class="mini-info">
+                                    <p>JiaXu Leng <small>PhD</small></p>
+                                    <p>School of Computer Science</p>
+                                </div>
+                                <div class="contact-action">
+                                    <button class="action-btn email" onclick="copyEmail(this)"
+                                        data-email="zhang.wei@univ.edu.cn">
+                                        <span>Copy Email</span>
+                                    </button>
+                                    <a href="team-ljx.html" class="action-btn scholar">Details</a>
+                                    <a href="https://faculty.cqupt.edu.cn/lengjiaxu/zh_CN/index.htm"
+                                        class="action-btn scholar">Teacher</a>
+                                    <a href="https://scholar.google.com/citations?user=KpX-CCcAAAAJ&hl=zh-CN&oi=ao"
+                                        class="action-btn scholar">Google</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -169,7 +196,8 @@
                                     </div>
                                     <div class="info-container">
                                         <h4 class="area-name">Video surveillance</h4>
-                                        <p class="area-brief">Object detection, video anomaly detection and prediction, pedestrian re-identification, image super-resolution reconstruction</p>
+                                        <p class="area-brief">Object detection, video anomaly detection and prediction,
+                                            pedestrian re-identification, image super-resolution reconstruction</p>
                                     </div>
                                 </div>
 
@@ -179,7 +207,8 @@
                                     </div>
                                     <div class="info-container">
                                         <h4 class="area-name">Embodied Intelligence</h4>
-                                        <p class="area-brief">Robot Manipulation, Difficult Scenario Generation, and Understanding</p>
+                                        <p class="area-brief">Robot Manipulation, Difficult Scenario Generation, and
+                                            Understanding</p>
                                     </div>
                                 </div>
 
