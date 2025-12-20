@@ -232,12 +232,12 @@ sup {
 }
 
 a {
-    color: #FEA116;
+    color: #259faf;
     text-decoration: none
 }
 
 a:hover {
-    color: #cb8112
+    color: #3ceccf
 }
 
 a:not([href]):not([class]),
@@ -3090,14 +3090,15 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #000;
-    background-color: #FEA116;
-    border-color: #FEA116
+    background-color: #2e75b6;
+    border-color: #327dee
 }
 
 .btn-primary:hover {
     color: #000;
-    background-color: #feaf39;
-    border-color: #feaa2d
+    background-color: #3ceccf;
+;
+    border-color: #3dc9e2
 }
 
 .btn-check:focus+.btn-primary,
@@ -8297,7 +8298,8 @@ fieldset:disabled .btn {
 }
 
 .text-primary {
-    color: #FEA116 !important
+    color: #091a29 !important
+    
 }
 
 .text-secondary {
