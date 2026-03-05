@@ -410,22 +410,25 @@ function copyEmail(btn) {
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.getElementById('videoWrapper');
-    const video = document.getElementById('researchVideo');
-    const poster = document.getElementById('videoPoster');
+    // 找到页面上所有的视频容器 (通过 class 查找，不受 ID 限制)
+    const videoWrappers = document.querySelectorAll('.video-wrapper');
 
-    // 点击封面/播放按钮时的逻辑
-    poster.addEventListener('click', () => {
-        // 1. 隐藏封面
-        poster.classList.add('hidden');
-        
-        // 2. 显示原生控件 (进度条、音量等)
-        video.setAttribute('controls', 'true');
-        
-        // 3. 开始播放
-        video.play();
+    videoWrappers.forEach(wrapper => {
+        // 在每个容器内部寻找对应的 video 和 poster
+        const video = wrapper.querySelector('video');
+        const poster = wrapper.querySelector('.video-poster');
+
+        if (video && poster) {
+            poster.addEventListener('click', () => {
+                // 隐藏封面
+                poster.classList.add('hidden');
+                // 开启控制条
+                video.setAttribute('controls', 'true');
+                // 播放视频
+                video.play();
+            });
+        }
     });
-
 });
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
